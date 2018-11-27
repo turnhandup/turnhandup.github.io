@@ -1,6 +1,7 @@
 body{
     margin:0;
     font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
 
 }
 /* HEADER DESIGN */
@@ -34,6 +35,33 @@ body{
 .menu .right li {
   display:inline;
   margin-right:40px;
+}
+
+.dropdown-content {
+  display:none;
+  background-color:#c4c4c4;
+  padding:10px;
+  position:absolute;
+  text-align:center;
+  width:100%;
+}
+.dropdown-content a {
+  color:white;
+  text-decoration: none;
+  display: inline;
+  padding:3px;
+  margin:0px 10px;
+  text-align: left;
+  border-bottom:1.5px solid transparent;
+  transition:border-bottom 0.1s ease-in-out;
+}
+
+.dropdown-content a:hover {
+  border-bottom: 1.5px solid #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: inline;
 }
 .menu .right li .menu-item{
     color:white;

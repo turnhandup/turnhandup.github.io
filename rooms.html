@@ -15,17 +15,16 @@
 
     </head>
     <body>
-          <header>
-            <div class="menu-wrapper">
+           <div class="menu-wrapper">
                 <ul class="menu">
                     <span class="left">
                         <a href="index.html"><img class="logo" src="img/gale-logo.png"></a>
                     </span>
                     <span class="right">
-                        <li><a href="#home" class="menu-item home">Home</a></li>
-                        <li><a href="rooms.html" class="menu-item rooms">Rooms</a></li>
-                        <li><a href="#food-and-drinks" class="menu-item food-and-drinks">Food and drinks</a></li>
-                        <li><a href="#amenities" class="menu-item amenities">Amenities</a></li>
+                        <li><a href="index.html" class="menu-item home">Home</a></li>
+                        <li onMouseOver="showRooms()" ><a href="rooms.html" class="menu-item rooms">Rooms</a></li>
+                        <li><a href="fooddrinks.html" class="menu-item food-and-drinks">Food and drinks</a></li>
+                        <li><a href="amenities.html" class="menu-item amenities">Amenities</a></li>
                         <li><a href="#about" class="menu-item about">About</a></li>
                         <li><a href="contact.html" class="menu-item contact-us">Contact us</a></li>
                         <li>
@@ -34,6 +33,13 @@
                         <span class="burger-icon" onclick="openMobileMenu()">&#9776;</span>
                     </span>
                 </ul>
+            </div>
+            <div class="dropdown-wrapper">
+                <div class="dropdown-content" id="dropdown-content">
+                        <a href="singlequeen.html">SINGLE QUEEN</a>
+                        <a href="doublequeen.html">DOUBLE QUEEN</a>
+                        <a href="singleking.html">SINGLE KING</a>
+                </div>
             </div>
             <div id="mobile-menu" class="sidenav mobile-menu-wrapper">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

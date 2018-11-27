@@ -5,6 +5,9 @@ function openMobileMenu() {
 function closeNav() {
     document.getElementById("mobile-menu").style.width = "0";
 }
+function showRooms() {
+  document.getElementById('dropdown-content').style.display = "block";
+}
  function initMap() {
         var styledMapType = new google.maps.StyledMapType(
             [
