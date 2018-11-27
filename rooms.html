@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rooms</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link href="css/rooms.css" rel="stylesheet" type="text/css">
+        <script src="js/main.js"></script>
+
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:100,200,300,400,500,700,800" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    </head>
+    <body>
+          <header>
+            <div class="menu-wrapper">
+                <ul class="menu">
+                    <span class="left">
+                        <a href="index.html"><img class="logo" src="img/gale-logo.png"></a>
+                    </span>
+                    <span class="right">
+                        <li><a href="#home" class="menu-item home">Home</a></li>
+                        <li><a href="rooms.html" class="menu-item rooms">Rooms</a></li>
+                        <li><a href="#food-and-drinks" class="menu-item food-and-drinks">Food and drinks</a></li>
+                        <li><a href="#amenities" class="menu-item amenities">Amenities</a></li>
+                        <li><a href="#about" class="menu-item about">About</a></li>
+                        <li><a href="contact.html" class="menu-item contact-us">Contact us</a></li>
+                        <li>
+                            <button class="book-now">BOOK NOW</button>
+                        </li>
+                        <span class="burger-icon" onclick="openMobileMenu()">&#9776;</span>
+                    </span>
+                </ul>
+            </div>
+            <div id="mobile-menu" class="sidenav mobile-menu-wrapper">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#home" class="menu-item home">Home</a>
+                    <a href="rooms.html" class="menu-item rooms">Rooms</a>
+                    <a href="#food-and-drinks" class="menu-item food-and-drinks">Food and drinks</a>
+                    <a href="#amenities" class="menu-item amenities">Amenities</a>
+                    <a href="#about" class="menu-item about">About</a>
+                    <a href="contact.html" class="menu-item contact-us">Contact us</a>
+                    <button class="book-now">BOOK NOW</button>
+            </div>
+        </header>
+        <main>
+            <div class="rooms-div">
+                <h1>ROOMS</h1>
+            </div>
+            <div class="book">
+                <span>BOOK NOW & RECEIVE 10% OFF</span><button class="book-and-save">BOOK & SAVE</button>
+            </div>
+            <div class="main-section">
+                <div class="room-section">
+                    <div class="room-section-content">
+                        <div class="image-section">
+                            <div class="label">
+                                <div class="line"></div>
+                                <p class="tonights-rate">TONIGHT'S <br> RATE</p>
+                                <p class="price">$ 299</p>
+                            </div>
+                            <div class="image">
+                                <img src="img/single_queen.jpg">
+                                <p class="label-mobile">$ 299</p>
+                            </div>
+                        </div>
+                        <div class="text-section">
+                            <h2>SINGLE QUEEN</h2>
+                            <p>Our 170-square-foot Glenwood Queen is cozy and compact, and tastefully designed with our signature fixtures and furnishings – 
+                            including a custom-made queen bed, a 43-inch flat-screen television, air conditioning and a retro ceiling fan.</p>
+                            <button class="book-room-now">VIEW ROOM</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-section">
+                    <div class="room-section-content">
+                        <div class="image-section image-section-mobile">
+                            <div class="label-right">
+                                    <div class="line"></div>
+                                    <p class="tonights-rate">TONIGHT'S<br> RATE</p>
+                                    <p class="price">$ 399</p>
+                            </div>
+                            <div class="image">
+                                <img src="img/double_queen.jpg">
+                                <p class="label-mobile">$ 399</p>
+                            </div>
+                        </div>
+                        <div class="text-section">
+                            <h2>DOUBLE QUEEN</h2>
+                            <p>The Glenwood Two Queen are our largest rooms, at an expansive 315 square feet. They are tastefully designed with two queen-size beds, custom fixtures and furnishings,
+                            a 43-inch flat-screen television, and a retro ceiling fan. Our Glenwood Two Queen rooms do not offer air conditioning.</p>
+                            <button class="book-room-now">VIEW ROOM</button>
+                        </div>
+                        <div class="image-section image-section-right">
+                            <div class="label-right">
+                                <div class="line"></div>
+                                <p class="tonights-rate">TONIGHT'S<br> RATE</p>
+                                <p class="price">$ 399</p>
+                            </div>
+                            <img src="img/double_queen.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="room-section">
+                     <div class="room-section-content">
+                        <div class="image-section">
+                            <div class="label">
+                                <div class="line"></div>
+                                <p class="tonights-rate">TONIGHT'S <br> RATE</p>
+                                <p class="price">$ 599</p>
+                            </div>
+                            <div class="image">
+                                <img src="img/single_king.jpg">
+                                <p class="label-mobile">$ 599</p>
+                            </div>
+                        </div>
+                        <div class="text-section">
+                            <h2>SINGLE KING</h2>
+                            <p>Our 315-square-foot Glenwood King is tastefully designed with our signature fixtures and furnishings – including a custom-made king bed,
+                             a 43-inch flat-screen television and a retro ceiling fan. Our Glenwood King room does not offer air conditioning.</p>
+                            <button class="book-room-now">VIEW ROOM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pattern-wrapper">
+                <div class="pattern"></div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <a href="index.html"><img class="logo" src="img/gale-logo.png"></a>
+            </div>
+            <div>
+                <p>Gale South Beach, 1690 Collins Avenue, Miami Beach, FL</p>
+            </div>
+        </footer>
+    </body>
+</html>

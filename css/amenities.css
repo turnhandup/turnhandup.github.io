@@ -1,0 +1,66 @@
+main .text{
+    text-align:center;
+    margin:0 auto;
+    background:url(../img/amenities/background.jpg) ;
+    background-size:cover;
+    background-position: 100%;
+}
+main .text h1{
+    padding:200px 0px;
+    color:white;
+    margin:0px;
+    font-size:100px;
+}
+main .images{
+    margin:50px 0px;
+    text-align:center;
+}
+main .images img{
+    object-fit: cover;
+}
+main .images img:nth-of-type(1),
+main .images img:nth-of-type(4){
+    height:30vw;
+    width:30vw;
+}
+
+main .images img:nth-of-type(2),
+main .images img:nth-of-type(3){
+    height:30vw;
+    width:50vw;
+}
+main .images img:nth-of-type(5),
+main .images img:nth-of-type(6){
+    height:30vw;
+    width:40vw;
+}
+main .images img:nth-of-type(7),
+main .images img:nth-of-type(8){
+    height:30vw;
+    width:20vw;
+}
+main .images img:nth-of-type(9){
+    height:30vw;
+    width:40vw;
+}
+
+@media(max-width:576px){
+    main .images img:nth-of-type(1),
+    main .images img:nth-of-type(2),
+    main .images img:nth-of-type(3),
+    main .images img:nth-of-type(4),
+    main .images img:nth-of-type(5),
+    main .images img:nth-of-type(6),
+    main .images img:nth-of-type(7),
+    main .images img:nth-of-type(8),
+    main .images img:nth-of-type(9){
+        height:90vw;
+        width:90vw;
+    }
+}
+@media(max-width:576px){
+    main .text h1{
+        font-size:4em;
+        text-align:center;
+    }
+}

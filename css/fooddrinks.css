@@ -1,0 +1,52 @@
+.main-info{
+    margin:20px 100px;
+}
+.main-info .image{
+    max-width:55%;
+    text-align:center;
+    margin:0 auto;
+    display:inline-block; 
+}
+.main-info .image img{
+    width:100%;
+}
+.main-info .information {
+    display:inline-block;
+    width:40%;
+    margin-left:20px;
+}
+.main-info .information h1{
+    text-align:center;
+}
+.main-info .information .more{
+    background-color:#9b7f25;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    font-weight: bold;
+}
+.main-info .information .mondayfriday .left,
+.main-info .information .mondayfriday .right,
+.main-info .information .saturday .left,
+.main-info .information .saturday .right,
+.main-info .information .sunday .left,
+.main-info .information .sunday .right{
+    min-width:30%;
+    max-width:50%;
+    display:inline-block; 
+}
+.main-info .information h3,
+.main-info .information h4,
+.main-info .information p{
+    margin:0px;
+}
+.gallery{
+    margin:50px 0px;
+    text-align:center;
+}
+.gallery img{
+    object-fit: cover;
+    width:300px;
+    height:300px;
+    margin:10px;
+}

@@ -1,0 +1,107 @@
+.contact-info{
+    background:url(../img/contact_background.jpg) ;
+    background-size:cover;
+    width:100%;
+    min-height:100vh;
+}
+.contact-info .main-info-wrapper{
+    margin:0px 100px;
+    padding:150px 0px;
+}
+.contact-info .main-info-wrapper .main-info{
+    background-color:rgba(91, 90, 86, 0.9);
+    display:flex;
+}
+.contact-info .main-info-wrapper .main-info #map{
+    width:50%;
+    height:auto;
+}
+.contact-info .main-info-wrapper .main-info .info{
+    width:50%;
+    color:white;
+    text-align:center;
+    letter-spacing:5px;
+}
+.contact-info .main-info-wrapper .main-info .info h1{
+    padding:20px;
+    margin:20px 100px;
+    border: 1px solid #fff;
+    position: relative;
+}
+.contact-info .main-info-wrapper .main-info .info h1:before{
+    background: none;
+    border: 1px solid #fff;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: -5px;
+    bottom: -4px;
+    pointer-events: none;
+}
+.contact-info .main-info-wrapper .main-info .info .contact-section{
+    margin:0px 100px 40px 100px;
+}
+.contact-info .main-info-wrapper .main-info .info .contact-section .divider{
+    width:20px;
+    height:20px;
+    background-color:none;
+    border:3px solid #9b7f25;
+    margin: 0 auto;
+    transform: rotate(45deg);
+}
+.contact-info .main-info-wrapper .main-info .info .contact-section p{
+    font-family:'Montserrat';
+    font-weight:200;
+    font-style: italic;
+}
+.contact-info .main-info-wrapper .main-info .info .maps-link{
+    display:none;
+}
+@media(max-width:996px){
+    .contact-info .main-info-wrapper{
+        margin:0px;
+        padding-top:100px;
+        padding-bottom:100px;
+    }
+    .contact-info .main-info-wrapper .main-info{
+        display:block;
+    }
+    .contact-info .main-info-wrapper .main-info #map{
+        display:none;
+    }
+    .contact-info .main-info-wrapper .main-info .info{
+        width:100%;
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+    .contact-info .main-info-wrapper .main-info .info h1{
+        margin:20px;
+    }
+    .contact-info .main-info-wrapper .main-info .info .contact-section{
+        margin:0px 20px 40px 20px;
+    }
+    .contact-info .main-info-wrapper .main-info .info .maps-link{
+        text-decoration:none;
+        color:white;
+        display:block;
+        padding:20px;
+        margin:20px;
+        border: 1px solid #fff;
+        position: relative;
+
+    }
+    .contact-info .main-info-wrapper .main-info .info .maps-link:before{
+        background: none;
+        border: 1px solid #fff;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        right: -5px;
+        bottom: -4px;
+        pointer-events: none;
+    }
+}
