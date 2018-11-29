@@ -23,7 +23,6 @@ main .images img:nth-of-type(4){
     height:30vw;
     width:30vw;
 }
-
 main .images img:nth-of-type(2),
 main .images img:nth-of-type(3){
     height:30vw;
