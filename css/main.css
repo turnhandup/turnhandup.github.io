@@ -13,6 +13,7 @@ body{
 .menu-wrapper{
     position:sticky;
     top: 0;
+    z-index:100;
 }
 .menu {
   margin:0;
@@ -74,7 +75,7 @@ body{
 .menu .right  li .menu-item:hover{
   border-bottom:1.8px solid white;
 }
-.menu .right .book-now{
+.book-now{
     border:2px solid white;
     color:white;
     background-color:transparent;
@@ -84,7 +85,11 @@ body{
     font-weight:bold;
     transition: all 0.5s ease-out;
   }
-.menu .right .book-now:hover{
+.book-now a {
+  color:white;
+  text-decoration:none;
+}
+.book-now:hover{
     color:#9b7f25;
     background-color:white;
 }
@@ -145,6 +150,7 @@ footer{
   text-align:center;
   color:white;
   text-decoration:none;
+  z-index:100;
 }
 footer div a {
   text-decoration:none;
