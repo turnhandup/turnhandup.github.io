@@ -132,7 +132,7 @@ header{
     font-family:'Oswald', sans-serif;
 
 }
-.rooms{
+.rooms-section{
     background-size:cover;
     width:100%;
     min-height:100vh;
@@ -140,19 +140,8 @@ header{
     background-position: center; 
     position:relative;
 }
-.rooms .section{
-    color:white;
-    min-height:30vh;
-    width:30vw;
-    top:30vh;
-    position:absolute;
-    left:10vw;
-    right:0;
-    text-align:center;
-    border:1px solid white;
-    padding:30px;
-}
-.rooms .section:before{
+
+.rooms-section .section:before{
     background: none;
     border: 1px solid #fff;
     content: "";
@@ -164,28 +153,126 @@ header{
     bottom: -4px;
     pointer-events: none;
 }
-.rooms .section p{
+.rooms-section .section{
+    color:white;
+    min-height:30vh;
+    width:30vw;
+    top:30vh;
+    position:absolute;
+    left:10vw;
+    text-align:center;
+    border:1px solid white;
+    padding:30px;
+}
+.rooms-section .section p{
     margin-bottom:30px;
 }
-.rooms .section h1{
+.rooms-section .section h1{
     font-family:'Oswald', sans-serif;
 }
-.rooms .section .room{
+.rooms-section .section .room{
     color:white;
     text-decoration:none;
     display:block;
     margin:20px;
-    font-size:1.5em;
+    font-size:1em;
     text-align:left;
     width:fit-content;
     border-bottom:1.5px solid transparent;
     transition:border-bottom 0.1s ease-in-out;
 }
-.rooms .section .room:hover {
+.rooms-section .section .room:hover {
     border-bottom: 1.5px solid #f1f1f1;
 }
 #map{
     width:100vw;
     height:60vh;
+}
+.fooddrinks-section{
+    background-size:cover;
+    width:100%;
+    min-height:100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/10.jpg);
+    background-position: center; 
+    position:relative;
+}
+.fooddrinks-section .section{
+    color:white;
+    min-height:30vh;
+    width:30vw;
+    top:30vh;
+    position:absolute;
+    right:10vw;
+    text-align:center;
+    border:1px solid white;
+    padding:30px;
+}
+.fooddrinks-section .section:before{
+    background: none;
+    border: 1px solid #fff;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: -5px;
+    bottom: -4px;
+    pointer-events: none;
+}
+.fooddrinks-section .section p{
+    margin-bottom:30px;
+}
+.fooddrinks-section .section h1{
+    font-family:'Oswald', sans-serif;
+}
 
+@media(max-width:576px){
+    .fooddrinks-section .section,
+    .info .section,
+    .rooms-section .section{
+        width:70vw;
+        min-height:auto;
+        margin:0 auto;
+        position:relative;
+        right:0;
+        left:0;
+        top:20vh;
+        padding:30px;
+    }
+    header .main-slider .text-wrapper .text p{
+        display:none;
+    }
+    header .main-slider .text-wrapper .text button{
+        display:block;
+        text-align:center;
+        margin:0 auto;
+        margin-top:20px;
+    }
+    header .main-slider .text-wrapper .text{
+        height:auto;
+        left:0;
+        right:0;
+        margin:0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-80%);  
+    }
+   
+}
+@media(max-width:1024px){
+    .fooddrinks-section .section,
+    .info .section,
+    .rooms-section .section{
+        min-height:auto;
+    }
+    header .main-slider .text-wrapper .text{
+        height:fit-content;
+        
+    }
+    .main-slider .previous, .main-slider .next{
+        top:50vh;
+    }
+    .book-now{
+        margin-right:0px;
+    }
 }
