@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Food&Drinks</title>
+        <title>News | Anvil Hotel</title>
         <link href="css/main.css" rel="stylesheet" type="text/css">
         <link href="css/news.css" rel="stylesheet" type="text/css">
-        <script src="js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+        <script src="js/main.js"></script>
+        <script src="js/news.js"></script>
         <!-- FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
@@ -56,93 +58,27 @@
         </header>
         <main>
             <div class="search-panel-wrapper">
-                <select>
-                    <option value="volvo">All</option>
-                    <option value="saab">Films</option>
-                    <option value="mercedes">Music</option>
-                    <option value="audi">Cinema</option>
-                    <option value="audi">Brunch</option>
-                    <option value="audi">Dance</option>
-                    <option value="audi">Board games</option>
-                </select>
-                <select>
-                    <option value="asc">Name ascending</option>
-                    <option value="desc">Name descending</option> 
-                </select>
-                <input >
+                <div id="myBtnContainer">
+                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('films')"> Films</button>
+                    <button class="btn" onclick="filterSelection('brunch')"> Brunch</button>
+                    <button class="btn" onclick="filterSelection('dance')"> Dance</button>
+                    <button class="btn" onclick="filterSelection('board games')"> Board games</button>
+                </div>
+                
+                <button class="asc" onclick="nameAscending(newsArray)">Asc by Name</button>
+                <button class="desc" onclick="nameDescending(newsArray)">Desc by Name</button>
+                <input type="text"> 
+                <button type="submit" onclick="search('dance')">Search</button>
             
             </div>
-            <div class="news">
-                <div class="news-card-wrapper">
-                    <div class="news-card">
-                        <img src="img/10.jpg">
-                        <h1>Lobby Cocoa Club</h1>
-                        <h5>20th Nov 2018 | Films</h5>
-                        <p class="short-description">Cozy up at the fire in the Anvil Lobby with Anvil’s 
-                            spiked hot chocolate, a recipe crafted by Death & Co. The complimentary drink is available daily.</p>
-                        
-                    </div>
-                </div>
-                <div class="news-card-wrapper">
-                    <div class="news-card">
-                        <img src="img/10.jpg">
-                        <h1>Lobby Cocoa Club</h1>
-                        <p class="short-description">Cozy up at the fire in the Anvil Lobby with Anvil’s 
-                            spiked hot chocolate, a recipe crafted by Death & Co. The complimentary drink is available daily.</p>
-                        
-                    </div>
-                </div>
-                <div class="news-card-wrapper">
-                    <div class="news-card">
-                        <img src="img/10.jpg">
-                        <h1>Lobby Cocoa Club</h1>
-                        <p class="short-description">Cozy up at the fire in the Anvil Lobby with Anvil’s 
-                            spiked hot chocolate, a recipe crafted by Death & Co. The complimentary drink is available daily.</p>
-                        
-                    </div>
-                </div>
-                <div class="news-card-wrapper">
-                    <div class="news-card">
-                        <img src="img/10.jpg">
-                        <h1>Lobby Cocoa Club</h1>
-                        <p class="short-description">Cozy up at the fire in the Anvil Lobby with Anvil’s 
-                            spiked hot chocolate, a recipe crafted by Death & Co. The complimentary drink is available daily.</p>
-                        <p class="short-description">Cozy up at the fire in the Anvil Lobby with Anvil’s 
-                            spiked hot chocolate, a recipe crafted by Death & Co. The complimentary drink is available daily.</p>
-                        <p class="short-description">Cozy up at the fire in the Anvil Lobby with Anvil’s 
-                            spiked hot chocolate, a recipe crafted by Death & Co. The complimentary drink is available daily.</p>
-                        <p class="short-description">Cozy up at the fire in the Anvil Lobby with Anvil’s 
-                            spiked hot chocolate, a recipe crafted by Death & Co. The complimentary drink is available daily.</p>
-                        
-                    </div>
-                </div>
-                <div class="news-card-wrapper">
-                    <div class="news-card">
-                        <img src="img/10.jpg">
-                        <h1>Lobby Cocoa Club</h1>
-                        <p class="short-description">Cozy up at the fire in the Anvil Lobby with Anvil’s 
-                            spiked hot chocolate, a recipe crafted by Death & Co. The complimentary drink is available daily.</p>
-                        
-                    </div>
-                </div>
-                <div class="news-card-wrapper">
-                    <div class="news-card">
-                        <img src="img/10.jpg">
-                        <h1>Lobby Cocoa Club</h1>
-                        <p class="short-description">Cozy up at the fire in the Anvil Lobby with Anvil’s 
-                            spiked hot chocolate, a recipe crafted by Death & Co. The complimentary drink is available daily.</p>
-                        
-                    </div>
-                </div>
-                <div class="news-card-wrapper">
-                    <div class="news-card">
-                        <img src="img/10.jpg">
-                        <h1>Lobby Cocoa Club</h1>
-                        <p class="short-description">Cozy up at the fire in the Anvil Lobby with Anvil’s 
-                            spiked hot chocolate, a recipe crafted by Death & Co. The complimentary drink is available daily.</p>
-                        
-                    </div>
-                </div>
+            <div class="news grid" id="news">
+                
+            </div>
+            <div class="pagination">
+                <a href="javascript:prevPage()" id="prev">Prev</a>
+                <span id="page"></span> / <span id="pages"></span>
+                <a href="javascript:nextPage()" id="next">Next </a>
             </div>
         </main>
         <footer>
