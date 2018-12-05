@@ -80,7 +80,7 @@ function nameAscending(array){
     $("#news").empty();
     $(".asc").css("display", "none");    
     $(".desc").css("display", "inline-block");    
-    changePage(1,newsArray);
+    changePage(1,array);
 }
 function nameDescending(array){
     array.sort(function(a, b){
@@ -93,12 +93,13 @@ function nameDescending(array){
     $(".desc").css("display", "none");    
     $(".asc").css("display", "inline-block");    
 
-    changePage(1,newsArray);
+    changePage(1,array);
 }
 function filterSelection(value){
+    
     if(value==='all'){
         $("#news").empty();
-
+        highlightButton();
         changePage(1,newsArray);
     }
     else{
@@ -106,15 +107,44 @@ function filterSelection(value){
         var filtered = newsArray.filter(function(number) {
             return number.type==value;
           });
+          highlightButton();
+
         changePage(1,filtered);    
     }  
+   
 }
-
-function search(value){
-    var filtered=[];
-    for (var i=0; i < newsAmount; i++) {
-        
+function highlightButton(){
+    var btnContainer = document.getElementById("filter-buttons-wrapper");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
     }
+}
+function search(value){
+    $("#news").empty();
+    var filteredArray=[];
+    var findStr = $('#search').val();
+    for (var i=0; i <newsAmount; i++) {
+        var isContaining=false;
+
+        while(isContaining===false){
+            // alert(isContaining);
+            counter=0;
+            for (var key in newsArray[i]) {
+                if(newsArray[i][key].indexOf(findStr) !== -1){
+                    filteredArray.push(newsArray[i]);
+                    isContaining=true;
+                }
+            }
+            isContaining=true;
+            // alert(isContaining);
+        }
+    }
+    changePage(1, filteredArray);
 
 }
 window.onload = function() {

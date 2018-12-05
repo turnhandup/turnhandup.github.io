@@ -58,18 +58,19 @@
         </header>
         <main>
             <div class="search-panel-wrapper">
-                <div id="myBtnContainer">
+                <div id="filter-buttons-wrapper">
                     <button class="btn active" onclick="filterSelection('all')"> Show all</button>
                     <button class="btn" onclick="filterSelection('films')"> Films</button>
                     <button class="btn" onclick="filterSelection('brunch')"> Brunch</button>
                     <button class="btn" onclick="filterSelection('dance')"> Dance</button>
                     <button class="btn" onclick="filterSelection('board games')"> Board games</button>
+                    <button class="asc" onclick="nameAscending(newsArray)">Asc by Name</button>
+                    <button class="desc" onclick="nameDescending(newsArray)">Desc by Name</button>
                 </div>
                 
-                <button class="asc" onclick="nameAscending(newsArray)">Asc by Name</button>
-                <button class="desc" onclick="nameDescending(newsArray)">Desc by Name</button>
-                <input type="text"> 
-                <button type="submit" onclick="search('dance')">Search</button>
+                
+                <input type="text" id="search"> 
+                <button type="submit" class="search-button" onclick="search('dance')">Search</button>
             
             </div>
             <div class="news grid" id="news">
