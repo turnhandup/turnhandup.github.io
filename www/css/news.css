@@ -1,0 +1,110 @@
+main .search-panel-wrapper{
+    padding:20px;
+    text-align:right;
+    background-color:#e8e8e8;
+    height:auto;
+}
+main .search-panel-wrapper .desc{
+    display:none;
+}
+main .search-panel-wrapper button{
+    background-color:transparent;
+    border:2px solid #9b7f25;
+    color:#9b7f25;
+    padding:5px 15px;
+    margin:10px 3px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+main .search-panel-wrapper button.active,
+main .search-panel-wrapper .search-button{
+    background-color:#9b7f25;
+    color:white;
+}
+main .search-panel-wrapper button:hover{
+    color:white;
+    background-color:#9b7f25;
+    transition: 0.6s ease;
+}
+main .search-panel-wrapper #filter-buttons-wrapper{
+    display:inline-block;
+    text-align:left;
+    float:left;
+}
+main .search-panel-wrapper input[type=text] {
+    border: 2px solid #9b7f25;
+    border-radius: 10px;
+    padding:5px;
+    width:20vw;
+}
+main .search-panel-wrapper input[type=text]:focus,
+main .search-panel-wrapper button:focus{
+    outline: none;
+}
+.news{
+    text-align:center;
+}
+.news-card-wrapper{
+    margin:20px;
+    display:inline-block;
+    vertical-align: top;
+    max-width:30vw;
+}
+.news-card-wrapper .news-card{
+    padding:0px 0px 50px;
+    background:#e8e8e8;
+}
+.news-card-wrapper .news-card img{
+    object-fit: cover;
+    width:100%;
+    height:40vh;
+}
+.news-card-wrapper .news-card h1{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    margin-bottom:5px;
+}
+.news-card-wrapper .news-card h5{
+    margin:0px;
+    color:grey;
+    font-weight:300;
+}
+.news-card-wrapper .news-card p{
+    padding:0px 20px;
+}
+.pagination{
+    text-align:center;
+    text-transform: uppercase;
+    font-family:'Karla', sans-serif;
+    margin:20px;
+}
+.pagination a{
+    color:#9b7f25;
+    padding:5px 15px;
+    border:2px solid #9b7f25;
+    background-color:white;
+    text-transform: uppercase;
+    text-decoration:none;
+    margin:20px;
+    font-weight:bold;
+}
+@media(max-width:996px){
+    .news-card-wrapper{
+        max-width:40vw;
+    }
+    main .search-panel-wrapper{
+        text-align:center;
+    }
+    main .search-panel-wrapper #filter-buttons-wrapper{
+        float:none;
+    }
+    main .search-panel-wrapper input[type=text]{
+        width:50vw;
+    }
+    
+}
+@media(max-width:576px){
+    .news-card-wrapper{
+        max-width:90vw;
+    }
+}

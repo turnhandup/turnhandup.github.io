@@ -1,0 +1,169 @@
+.main-info{
+    margin:20px 100px;
+
+}
+
+.main-info .image{
+    max-width:65%;
+    text-align:center;
+    margin:0 auto;
+ 
+}
+.main-info .image img{
+    width:100%;
+    margin-top:20px;
+}
+
+.main-info .information {
+    width:60%;
+    text-align:center;
+    margin:0 auto;
+}
+.main-info .information h1{
+    text-align:center;
+}
+.main-info .information .more{
+    background-color:#9b7f25;
+    color:white;
+    padding:10px 30px;
+    margin:10px 0px;
+    font-size:1em;
+    border:none;
+}
+.main-info .information .hours{
+    font-family: 'Oswald', sans-serif;
+    font-size:2em;
+    font-weight:400;
+    margin-bottom:10px;
+}
+.main-info .information .mondayfriday .left,
+.main-info .information .mondayfriday .right,
+.main-info .information .saturday .left,
+.main-info .information .saturday .right,
+.main-info .information .sunday .left,
+.main-info .information .sunday .right{
+    min-width:30%;
+    max-width:50%;
+    display:inline-block; 
+}
+.main-info .information h3,
+.main-info .information h4,
+.main-info .information p{
+    margin:0px;
+}
+.main-info .information h3.now-open{
+    margin-bottom:10px;
+}
+.main-info .information div p{
+    color:#9b7f25;
+    font-weight:bold;
+    font-family:'Oswald', sans-serif;
+    font-weight:300;
+    font-size:2em;
+}
+.main-info .information div h3.day{
+    color:#9b7f25;
+}
+.gallery{
+    margin:50px 0px;
+    text-align:center;
+}
+.gallery img{
+    object-fit: cover;
+    width:300px;
+    height:300px;
+    margin:10px;
+}
+
+.main-info .information .menu-wrapper {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.main-info .information .menu-text-wrapper {
+    background-color: #fefefe;
+    margin: 0 auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    margin-top:50px;
+    margin-bottom:50px;
+}
+.main-info .information .menu-text{
+    border:2px solid #9b7f25;
+    padding:40px;
+}
+.main-info .information .menu-text-wrapper .menu-text .column-one,
+.main-info .information .menu-text-wrapper .menu-text .column-two{
+    min-width:40%;
+    max-width:50%;
+    display:inline-block;
+    vertical-align: top;
+    text-align:left;
+ 
+}
+.main-info .information .menu-text-wrapper .menu-text h1{
+    font-size:4em;
+}
+.main-info .information .menu-text-wrapper .menu-text p{
+    font-size:1em;
+    color:black;
+    font-family:inherit;
+    font-weight: 800;
+    margin-top:10px;
+}
+.main-info .information .menu-text-wrapper .menu-text h3{
+    color:#9b7f25;
+    font-size:2em;
+    margin-top:1em;
+}
+.main-info .information .menu-text-wrapper .menu-text h5{
+    margin:0px;
+    font-weight:400;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media(max-width:996px){
+    .main-info .information .menu-text-wrapper .menu-text .column-one,
+    .main-info .information .menu-text-wrapper .menu-text .column-two{
+        max-width:80%;
+        min-width:70%;
+        margin:0 auto;
+        display:block;
+        text-align:center;
+    }
+    .main-info{
+        margin:20px 0px;
+    }
+    .main-info .image{
+        max-width:100%;
+    }
+    .main-info .information{
+        width:90%;
+    }
+    .main-info .information p{
+        text-align:justify;
+    }
+    .main-info .information div p{
+        font-size:1.5em;
+        text-align:center;
+    }
+}

@@ -1,0 +1,210 @@
+body{
+    margin:0;
+    font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
+
+}
+/* HEADER DESIGN */
+#videoback{
+    min-width: 100%; 
+    min-height: 100%;
+    max-width:100%;
+}
+.menu-wrapper{
+    position:sticky;
+    top: 0;
+    z-index:100;
+}
+.menu {
+  margin:0;
+  background:#9b7f25;
+  padding: 10px;
+  padding-top:20px;
+}
+.menu .left img{
+  width:100px;
+  margin-top:-5px;
+  margin-left:40px;
+}
+.menu .right{
+  float:right;
+  margin-top:15px;
+}
+.menu .right .burger-icon{
+  display:none;
+}
+.menu .right li {
+  display:inline;
+  margin-right:40px;
+}
+
+.dropdown-content {
+  display:none;
+  background-color:#c4c4c4;
+  z-index:100;
+  padding:10px;
+  position:absolute;
+  text-align:center;
+  width:100%;
+}
+.dropdown-content a {
+  color:white;
+  text-decoration: none;
+  display: inline;
+  padding:3px;
+  margin:0px 10px;
+  text-align: left;
+  border-bottom:1.5px solid transparent;
+  transition:border-bottom 0.1s ease-in-out;
+}
+
+.dropdown-content a:hover {
+  border-bottom: 1.5px solid #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: inline;
+}
+.menu .right li .menu-item{
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom:3px;
+    transition:border-bottom 0.1s ease-in-out;
+}
+.menu .right  li .menu-item:hover{
+  border-bottom:1.8px solid white;
+}
+.book-now{
+    border:2px solid white;
+    color:white;
+    background-color:transparent;
+    padding:10px 30px;
+    margin-top:-10px;
+    margin-right:20px;
+    font-weight:bold;
+    transition: all 0.5s ease-out;
+  }
+.book-now a {
+  color:white;
+  text-decoration:none;
+}
+.book-now:hover{
+    color:#9b7f25;
+    background-color:white;
+}
+.book-now a:hover{
+  color:#9b7f25;
+}
+.mobile-menu-wrapper{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  right: 0;
+  background-color: #9b7f25;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.mobile-menu-wrapper a{
+  color:white;
+  text-decoration: none;
+  text-transform: uppercase;
+  display:block;
+  text-align:right;
+  margin:10px 0px 10px 0px;
+  font-size:25px;
+  padding:10px 30px 10px 0px;
+}
+.mobile-menu-wrapper .book-now{
+
+ background-color:white;
+  color:#9b7f25;
+}
+.mobile-menu-wrapper .book-now{
+  padding:0px 30px 0px 0px;
+}
+.mobile-menu-wrapper .book-now a{
+  padding:0px;
+}
+.mobile-menu-wrapper .closebtn{
+  font-size:50px;
+}
+.mobile-menu-wrapper .submenu a{
+  padding-right:50px;
+}
+#submenu{
+  display:none;
+}
+
+.mobile-menu-wrapper .book-now{
+  border:2px solid white;
+  color:white;
+  background-color:transparent;
+  padding:10px 30px;
+  font-weight:bold;
+  font-size:25px;
+  transition: all 0.5s ease-out;
+  float:right;
+  margin-right:30px;
+}
+.mobile-menu-wrapper .book-now:hover{
+  color:#9b7f25;
+  background-color:white;
+  
+}
+.pattern-wrapper{
+  padding:0px 20px 20px 20px;
+}
+.pattern{
+  height:60px;
+  background:url(../img/pattern.png) ;
+  background-size:contain;
+}
+footer{
+  background-color:#9b7f25;
+  height:100%;
+  text-align:center;
+  color:white;
+  text-decoration:none;
+  z-index:100;
+}
+footer div a {
+  text-decoration:none;
+  color:white;
+}
+footer img{
+  width:100px;
+  margin:10px 0px;
+}
+footer p{
+  margin:0px 20px 10px 20px;
+}
+@media screen and (max-width: 1024px) {
+  .menu{
+    padding:15px;
+  }
+  .menu .left img{
+    margin-top:5px;
+    margin-left:10px;
+  }
+  .menu .right li{
+    display:none;
+    color:red;
+  }
+  .menu .right .burger-icon{
+    display:inline-block;
+    font-size:40px;
+    margin-top:-10px;
+    color:white;
+    margin-right:10px;
+  }
+  .mobile-menu{
+    width:0px;
+  }
+}
+
+@media screen and (min-width:1024px){
+  
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Single King</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link href="css/room.css" rel="stylesheet" type="text/css">
+        <script src="js/main.js"></script>
+
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:100,200,300,400,500,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    </head>
+    <body>
+                        <header>
+            <div class="menu-wrapper">
+                <ul class="menu">
+                    <span class="left">
+                        <a href="index.html"><img class="logo" src="img/gale-logo.png"></a>
+                    </span>
+                    <span class="right">
+                        <li><a href="index.html" class="menu-item home">Home</a></li>
+                        <li onMouseOver="showRooms()" ><a href="rooms.html" class="menu-item rooms">Rooms</a></li>
+                        <li><a href="fooddrinks.html" class="menu-item food-and-drinks">Food and drinks</a></li>
+                        <li><a href="amenities.html" class="menu-item amenities">Amenities</a></li>
+                        <li><a href="news.html" class="menu-item about">News</a></li>
+                        <li><a href="contact.html" class="menu-item contact-us">Contact us</a></li>
+                        <li>
+                            <button class="book-now"><a href="booking.html">BOOK NOW</a></button>
+                        </li>
+                        <span class="burger-icon" onclick="openMobileMenu()">&#9776;</span>
+                    </span>
+                </ul>
+            </div>
+            <div class="dropdown-wrapper">
+                <div class="dropdown-content" id="dropdown-content">
+                        <a href="singlequeen.html">SINGLE QUEEN</a>
+                        <a href="doublequeen.html">DOUBLE QUEEN</a>
+                        <a href="singleking.html">SINGLE KING</a>
+                </div>
+            </div>
+            <div id="mobile-menu" class="sidenav mobile-menu-wrapper">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="index.html" class="menu-item home">Home</a>
+                    <a onclick="showRoomsMobile()" >Rooms</a>
+                    <div class="submenu" id="submenu">
+                            <a href="singlequeen.html">SINGLE QUEEN</a>
+                            <a href="doublequeen.html">DOUBLE QUEEN</a>
+                            <a href="singleking.html">SINGLE KING</a>
+                    </div>
+                    <a href="fooddrinks.html" class="menu-item food-and-drinks">Food and drinks</a>
+                    <a href="amenities.html" class="menu-item amenities">Amenities</a>
+                    <a href="news.html" class="menu-item about">News</a>
+                    <a href="contact.html" class="menu-item contact-us">Contact us</a>
+                    <button class="book-now"><a href="booking.html">BOOK NOW</a></button>
+            </div>
+        </header>
+        <main>
+            <div class="main-slider"> 
+                <div class="slide fade">
+                    <img src="img/singleking/1.jpg">
+                    <div class="text">Single King</div>
+                </div>
+                <div class="slide fade">
+                    <img src="img/singleking/2.jpg">
+                </div>
+                <div class="slide fade">
+                    <img src="img/singleking/3.jpg">
+                </div>
+                <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="description-wrapper">
+                <div class="description">
+                    <div class="column-one">
+                        <h1>Single King</h1>
+                        <p>The rooms at the Anvil are streamlined but detailed, cosseting but highly functional. 
+                        There’s a mountain-rustic vibe to the décor, from the high wainscoting to the iron bed frames.
+                        Look closely and you’ll notice thoughtful details – brass lighting fixtures, soft woolen blankets (custom-designed 
+                        by Woolrich), and leather-wrapped pegs for resting your skis or fishing rod.<br><br>
+                        Our 315-square-foot Glenwood King is tastefully designed with our signature fixtures and furnishings – 
+                        including a custom-made king bed, a 43-inch flat-screen television and a retro ceiling fan. 
+                        Our Glenwood King room does not offer air conditioning.<br><br>
+                        Our 225-square-foot Cache King provides the same amenities as our Glenwood rooms but with the added comfort of air conditioning.</p>
+                    </div>
+                    <div class="column-two">
+                        <h1>Amenities include:</h1>
+                        <ul>
+                            <li><div class="divider"></div>Iron bed frames designed by Studio Tack in collaboration with Charles P. Rogers</li>
+                            <li><div class="divider"></div>Custom Woolrich blankets</li>
+                            <li><div class="divider"></div>Custom furnishings, including benches by Tretiak Works and side tables by Hedge House</li>
+                            <li><div class="divider"></div>Photography by Mikael Kennedy</li>
+                            <li><div class="divider"></div>Lighting designed by Allied Maker</li>
+                            <li><div class="divider"></div>Outdor pool</li>
+                        </ul>
+                        <button class="view-more"><a href="amenities.html">VIEW MORE</a></button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="images">
+                    <img src="img/doublequeen/4.jpg">
+                    <img src="img/singleking/1.jpg">
+                    <img src="img/singleking/2.jpg">
+                    <img src="img/singleking/4.jpg">
+                    <img src="img/singleking/5.jpg">
+                    <img src="img/singleking/6.jpg">
+                    <img src="img/singleking/7.jpg">
+                    <img src="img/singleking/8.jpg">    
+                    <img src="img/singleking/10.jpg">    
+                    <img src="img/singleking/4.jpg">    
+            </div>
+        </main>
+      
+                
+                </body>
+        <footer>
+            <div>
+                <a href="index.html"><img class="logo" src="img/gale-logo.png"></a>
+            </div>
+            <div>
+                <p>Gale South Beach, 1690 Collins Avenue, Miami Beach, FL</p>
+            </div>
+        </footer>
+        <script src="js/slider.js"></script>
+
+    </body>
+</html>
