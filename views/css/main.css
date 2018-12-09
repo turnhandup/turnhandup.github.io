@@ -2,7 +2,6 @@ body{
     margin:0;
     font-family: 'Karla', sans-serif;
     overflow-x: hidden;
-
 }
 /* HEADER DESIGN */
 #videoback{
@@ -17,9 +16,9 @@ body{
 }
 .menu {
   margin:0;
-  background:#9b7f25;
   padding: 10px;
   padding-top:20px;
+  background:#9b7f25;
 }
 .menu .left img{
   width:100px;
@@ -37,85 +36,90 @@ body{
   display:inline;
   margin-right:40px;
 }
-
 .dropdown-content {
+  position:absolute;
   display:none;
+  width:100%;
+  padding:10px;
   background-color:#c4c4c4;
   z-index:100;
-  padding:10px;
-  position:absolute;
   text-align:center;
-  width:100%;
 }
 .dropdown-content a {
+  display: inline;
+  margin:0px 10px;
+  padding:3px;
+  border-bottom:1.5px solid transparent;
   color:white;
   text-decoration: none;
-  display: inline;
-  padding:3px;
-  margin:0px 10px;
   text-align: left;
-  border-bottom:1.5px solid transparent;
   transition:border-bottom 0.1s ease-in-out;
 }
-
 .dropdown-content a:hover {
   border-bottom: 1.5px solid #f1f1f1;
 }
-
 .dropdown:hover .dropdown-content {
   display: inline;
 }
 .menu .right li .menu-item{
+    padding-bottom:3px;
     color:white;
     text-decoration: none;
     text-transform: uppercase;
-    padding-bottom:3px;
     transition:border-bottom 0.1s ease-in-out;
 }
 .menu .right  li .menu-item:hover{
   border-bottom:1.8px solid white;
 }
+.divider{
+  width:10px;
+  height:10px;
+  margin: 0 auto;
+  border:3px solid #9b7f25;
+  background-color:none;
+  transform: rotate(45deg);
+}
 .book-now{
-    border:2px solid white;
-    color:white;
-    background-color:transparent;
-    padding:10px 30px;
     margin-top:-10px;
     margin-right:20px;
+    padding:10px 30px;
+    border:2px solid white;
+    background-color:transparent;
+    color:white;
     font-weight:bold;
     transition: all 0.5s ease-out;
-  }
+}
 .book-now a {
   color:white;
   text-decoration:none;
 }
 .book-now:hover{
-    color:#9b7f25;
-    background-color:white;
+  color:#9b7f25;
+  background-color:white;
 }
 .book-now a:hover{
   color:#9b7f25;
 }
 .mobile-menu-wrapper{
-  height: 100%;
-  width: 0;
   position: fixed;
-  z-index: 1;
   top: 0px;
   right: 0;
+  height: 100%;
+  width: 0;
+  z-index: 1;
   background-color: #9b7f25;
   overflow-x: hidden;
   transition: 0.5s;
 }
 .mobile-menu-wrapper a{
+  display:block;
+  margin:10px 0px 10px 0px;
+  padding:10px 30px 10px 0px;
+  font-size:25px;
   color:white;
   text-decoration: none;
   text-transform: uppercase;
-  display:block;
   text-align:right;
-  margin:10px 0px 10px 0px;
-  font-size:25px;
-  padding:10px 30px 10px 0px;
 }
 .mobile-menu-wrapper .book-now{
 
@@ -137,17 +141,16 @@ body{
 #submenu{
   display:none;
 }
-
 .mobile-menu-wrapper .book-now{
-  border:2px solid white;
-  color:white;
-  background-color:transparent;
-  padding:10px 30px;
-  font-weight:bold;
-  font-size:25px;
-  transition: all 0.5s ease-out;
   float:right;
   margin-right:30px;
+  padding:10px 30px;
+  border:2px solid white;
+  font-weight:bold;
+  font-size:25px;
+  color:white;
+  background-color:transparent;
+  transition: all 0.5s ease-out;
 }
 .mobile-menu-wrapper .book-now:hover{
   color:#9b7f25;
@@ -163,11 +166,11 @@ body{
   background-size:contain;
 }
 footer{
-  background-color:#9b7f25;
   height:100%;
   text-align:center;
   color:white;
   text-decoration:none;
+  background-color:#9b7f25;
   z-index:100;
 }
 footer div a {
@@ -181,7 +184,7 @@ footer img{
 footer p{
   margin:0px 20px 10px 20px;
 }
-@media screen and (max-width: 1024px) {
+@media (max-width: 996px) {
   .menu{
     padding:15px;
   }
@@ -195,16 +198,21 @@ footer p{
   }
   .menu .right .burger-icon{
     display:inline-block;
-    font-size:40px;
     margin-top:-10px;
-    color:white;
     margin-right:10px;
+    font-size:40px;
+    color:white;
   }
   .mobile-menu{
     width:0px;
   }
 }
-
-@media screen and (min-width:1024px){
-  
+@media(min-width:996px) and (max-width:1024px){
+  .menu .right{
+    text-align:right;
+  }
+  .menu .right li{
+    font-size:14px;
+    margin-right:20px;
+  }
 }

@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>News | Anvil Hotel</title>
-        <link href="css/main.css" rel="stylesheet" type="text/css">
-        <link href="css/booking.css" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-        <script type="text/javascript" src="js/booking.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <!-- FONTS -->
-        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:100,200,300,400,500,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+        <title>Booking | Anvil Hotel</title>
+        <link rel="icon" href="img/logo.png">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
 
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link href="css/booking.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/booking.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:100,200,300,400,500,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
     </head>
     <body>
          <header>
@@ -69,18 +67,19 @@
                         <h1>BOOK ROOM</h1>
                         <div class="divider"></div>
                     </div>
-                        <form>
+                        <form method="post" action="booking">
+                            <div class="error" id="error"><p>We are sorry, but the dates you've picked are already booked.<br> Please, refill the form</p></div>
                             <div>
-                                <label for="checkin" id="checkInLabel">Check in:</label>
+                                <label for="startDate" id="checkInLabel">Check in:</label>
                             </div>
                             <div>
-                                <input id="dateCheckIn" type="date" name="checkin">
+                                <input id="dateCheckIn" type="date" name="startDate" required>
                             </div>
                             <div>
-                                <label for="checkout" id="checkOutLabel">Check out:</label>
+                                <label for="endDate" id="checkOutLabel">Check out:</label>
                             </div>
                             <div>
-                                <input id="dateCheckOut" type="date" name="checkout">
+                                <input id="dateCheckOut" type="date" name="endDate" required>
                             </div>
                             <div>
                             </div>
@@ -88,8 +87,8 @@
                                 <label for="type">Room type:</label>
                             </div>
                             <div>
-                                <select id="type" name="type">
-                                    <option id="singlequeen"value="Single Queen" selected="selected">Single Queen</option>
+                                <select id="type" name="type" required>
+                                    <option id="singlequeen" value="Single Queen" selected="selected">Single Queen</option>
                                     <option id="doublequeen" value="Double Queen">Double Queen</option>
                                     <option id="singleking" value="Single King">Single King</option>
                                 </select>
@@ -98,22 +97,22 @@
                                 <label for="name">Name:</label>
                             </div>
                             <div>
-                                <input id="name" type="text" name="name" placeholder='Your name'>
+                                <input id="name" type="text" name="name" placeholder='Your name' required>
                             </div>
                             <div>
                                 <label for="email">Email:</label>
                             </div>
                             <div>
-                                <input id="email" type="email" name="email" placeholder='example@example.com'>
+                                <input id="email" type="email" name="email" placeholder='example@example.com' required>
                             </div>
                             <div>
-                                <label for="phone">Phone number:</label>
+                                <label for="phonenumber">Phone number:</label>
                             </div>
                             <div>
-                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required placeholder="Ex: 0688508525"> 
+                                <input type="tel" id="phone" name="phonenumber" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required placeholder="Ex: 0688508525"> 
                             </div>
+                            <button id="submit" type="submit">Book now</button>
                         </form>
-                        <button id="submit" type="submit">Book now</button>
                     </div>
                 </div>
             </div>

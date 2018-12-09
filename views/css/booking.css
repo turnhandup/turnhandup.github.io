@@ -1,0 +1,127 @@
+.main-wrapper{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    background:url(../img/1.jpg) ;
+    background-size:cover;
+    text-transform:uppercase;
+    color:white;
+}
+.main-wrapper .content-wrapper{
+    padding:40px 0px;
+}
+.main-wrapper .content-wrapper .content{
+    width:40vw;
+    background-color:rgba(91, 90, 86, 0.9);
+    margin:0 auto;
+    padding:50px 20px;
+    text-align:center;
+}
+.main-wrapper .content-wrapper .content .header-wrapper{
+    position: relative;
+    width:60%;
+    margin:0 auto;
+    margin-bottom:40px;
+    padding:20px;
+    border: 1px solid #fff;
+}
+.main-wrapper .content-wrapper .content .header-wrapper:before{
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: -5px;
+    bottom: -4px;
+    background: none;
+    border: 1px solid #fff;
+    content: "";
+    pointer-events: none;
+}
+.main-wrapper .content-wrapper .content .header-wrapper div,
+.main-wrapper .content-wrapper .content .header-wrapper h1{
+    display:inline-block;
+    margin:0px 5px;
+}
+.main-wrapper .content-wrapper .content form div label{
+    font-size:20px;
+}
+.main-wrapper .content-wrapper .content form div input,
+.main-wrapper .content-wrapper .content form div select {
+    width:40%;
+    background-color:transparent;
+    padding:10px 20px;
+    margin-bottom:20px;
+    margin-top:5px;
+    border:2px solid #9b7f25;
+    border-radius:10px;
+    text-align:left;
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box; 
+    box-sizing:content-box;
+}
+.main-wrapper .content-wrapper .content form div input:focus,
+.main-wrapper .content-wrapper .content form div select:focus {
+    outline:none;
+}
+
+.main-wrapper .content-wrapper .content form div input::placeholder,
+.main-wrapper .content-wrapper .content form div input,
+.main-wrapper .content-wrapper .content form div select{
+    color:white;
+}
+.main-wrapper .content-wrapper .content form div select option{
+    color:black;
+}
+.main-wrapper .content-wrapper .content form #submit{
+    width:50%;
+    background:#9b7f25;
+    margin-top:20px;
+    padding:10px 50px;
+    border:2px solid #9b7f25;
+    font-family:"Oswald", sans-serif;
+    font-size:20px;
+    color:white;
+    text-transform: uppercase;
+    transition:border .2s ease-in-out;
+    transition:color .4s ease-in-out;
+}
+.main-wrapper .content-wrapper .content form #submit:hover{
+    background: white;
+    border:2px solid white;
+    color:#9b7f25;
+}
+.main-wrapper .content-wrapper .content form .error{
+    display:none;
+    color:red;
+}
+@media (min-width:996px) and (max-width:1024px){
+    .main-wrapper .content-wrapper .content{
+        width:80vw;
+    }
+}
+@media(max-width:996px){
+    .main-wrapper .content-wrapper .content{
+        width:80vw;
+    }
+    .main-wrapper .content-wrapper .content .header-wrapper{
+        width:70%;
+        font-size:10px;
+    }
+    .main-wrapper .content-wrapper .content form div input,
+    .main-wrapper .content-wrapper .content form div select{
+        width:80%;
+    }
+    .main-wrapper .content-wrapper .content form #submit{
+        width:50%;
+    }
+}
+@media(max-width:576px){
+    .main-wrapper .content-wrapper .content .header-wrapper{
+        width:80%;
+        font-size:10px;
+    }
+    .main-wrapper .content-wrapper .content form #submit{
+        width:100%;
+    }
+}

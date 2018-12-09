@@ -1,9 +1,28 @@
 var newsAmount=0;
 var newsArray=[];
-$.getJSON('../json/news.json', function(data) {
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+var saveData=function(text){
+    var data = JSON.parse(text);
     newsArray=data.news;
-});
-$.getJSON('../json/news.json', function(data){});
+    changePage(1,newsArray);  
+
+    console.log(newsArray);
+};
+
+// $.getJSON('../json/news.json', function(data) {
+//     newsArray=data.news;
+// });
+// $.getJSON('../json/news.json', function(data){});
 var pageLimit=9;
 var currentPage=1;
 function numPages(array){
@@ -47,12 +66,13 @@ function changePage(page, array){
     var pages_span = document.getElementById("pages");
      if (page < 1) page = 1;
     if (page > numPages(array)) page = numPages(array);
-
+    console.log(array);
     newsDiv.innerHTML = "";
         for (var i = (page-1) * pageLimit; i < (page * pageLimit); i++) {
             var card="<div class='news-card-wrapper "+array[i].type+"'><div class='news-card'><img src='"+array[i].imageURL+"'><h1>"+array[i].title+"</h1><h5>"
                     +array[i].date+" | "+array[i].type+"</h5><p>"+array[i].description+"</p></div></div>"
-            $(card).appendTo("#news");
+            var news=document.getElementById("news");
+            news.innerHTML+=card;
             page_span.innerHTML = page;
             pages_span.innerHTML = numPages(array);
             if (page == 1) {
@@ -76,10 +96,9 @@ function nameAscending(array){
         if(a.title > b.title) { return 1; }
         return 0;
     })
-    console.log(array);
-    $("#news").empty();
-    $(".asc").css("display", "none");    
-    $(".desc").css("display", "inline-block");    
+    document.getElementById("news").innerHTML = "";
+    document.getElementById("asc").style.display="none";
+    document.getElementById("desc").style.display="inline-block";
     changePage(1,array);
 }
 function nameDescending(array){
@@ -88,22 +107,20 @@ function nameDescending(array){
         if(a.title < b.title) { return 1; }
         return 0;
     })
-    console.log(array);
-    $("#news").empty();
-    $(".desc").css("display", "none");    
-    $(".asc").css("display", "inline-block");    
-
+    document.getElementById("news").innerHTML = "";
+    document.getElementById("desc").style.display="none";
+    document.getElementById("asc").style.display="inline-block";
     changePage(1,array);
 }
 function filterSelection(value){
     
     if(value==='all'){
-        $("#news").empty();
+        document.getElementById("news").innerHTML = "";
         highlightButton();
         changePage(1,newsArray);
     }
     else{
-        $("#news").empty();
+        document.getElementById("news").innerHTML = "";
         var filtered = newsArray.filter(function(number) {
             return number.type==value;
           });
@@ -125,14 +142,12 @@ function highlightButton(){
     }
 }
 function search(value){
-    $("#news").empty();
+    document.getElementById("news").innerHTML = "";
     var filteredArray=[];
-    var findStr = $('#search').val();
+    var findStr = document.getElementById("search").value;
     for (var i=0; i <newsAmount; i++) {
         var isContaining=false;
-
         while(isContaining===false){
-            // alert(isContaining);
             counter=0;
             for (var key in newsArray[i]) {
                 if(newsArray[i][key].indexOf(findStr) !== -1){
@@ -141,14 +156,14 @@ function search(value){
                 }
             }
             isContaining=true;
-            // alert(isContaining);
         }
     }
     changePage(1, filteredArray);
 
 }
 window.onload = function() {
-    changePage(1,newsArray);  
+    readTextFile("json/news.json", saveData);
+
    
 };
 

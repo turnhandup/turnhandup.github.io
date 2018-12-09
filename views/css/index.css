@@ -2,16 +2,14 @@ header{
     margin-bottom:-25px;
 }
 .main-slider {
-    max-width: 100%;
     position: relative;
+    max-width: 100%;
     margin: auto;
 }
 .main-slider .video{
     position: relative;
-    height: 350px;
-    overflow: hidden;
     height:100vh;
-
+    overflow: hidden;
 }
 .main-slider .video .slide-item-video{
     width:100%;
@@ -19,54 +17,49 @@ header{
 }
 .main-slider .slide .slide-item{
     width:100%;
-    object-fit: cover;
     height:100vh;
+    object-fit: cover;
+}
+header .main-slider .divider{
+    display:inline-block;
+    margin:0px 10px;
 }
 .main-slider .text-wrapper{
     width:100vw;
 }
 .main-slider .text-wrapper .text {
-    color: #f2f2f2;
-    background-color:rgba(178,178,178, .8);
-    margin: 0 auto;
     position: absolute;
     bottom: 37vh;
     left:25%;
     width: 50%;
+    margin: 0 auto;
+    padding:40px 20px;
+    color: #f2f2f2;
+    background-color:rgba(178,178,178, .8);
     text-align: center;
     font-weight:300;
-    padding:40px 20px;
-    height:26vh;
-}
-.main-slider .text-wrapper .text .divider{
-    width:10px;
-    height:10px;
-    display:inline-block;
-    background-color:none;
-    border:3px solid #9b7f25;
-    transform: rotate(45deg);
 }
 .main-slider .text-wrapper .text h1{
-    margin:0px 10px auto 15px;
     display:inline-block;
+    margin:0px 10px auto 15px;
 }
 .main-slider .text-wrapper .text p{
     margin-bottom:30px;
 }
 .main-slider .previous, 
 .main-slider .next {
-    cursor: pointer;
     position: absolute;
     top: 40vh;
     width: auto;
-    padding: 16px;
     margin:-22px 20px 0px 20px;
+    padding: 16px;
+    border-radius: 0 3px 3px 0;
     color: white;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
+    cursor: pointer;
+    transition: 0.6s ease;
 }
 .main-slider .previous:hover,
 .main-slider .next:hover {
@@ -93,36 +86,35 @@ header{
 }
 
 .info{
-    background-size:cover;
+    position:relative;
     width:100%;
     min-height:100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/4.jpg);
     background-position: center; 
-    position:relative;
+    background-size:cover;
 }
 .info .section{
-    color:white;
-    min-height:30vh;
-    width:30vw;
-    top:30vh;
     position:absolute;
+    top:30vh;
     left:0;
     right:0;
+    width:30vw;
     margin:0 auto;
-    text-align:center;
-    border:1px solid white;
     padding:30px;
+    border:1px solid white;
+    text-align:center;
+    color:white;
 }
 .info .section:before{
-    background: none;
-    border: 1px solid #fff;
-    content: "";
-    display: block;
     position: absolute;
     top: 4px;
     left: 4px;
     right: -5px;
     bottom: -4px;
+    display: block;
+    border: 1px solid #fff;
+    content: "";
+    background: none;
     pointer-events: none;
 }
 .info .section p{
@@ -130,39 +122,37 @@ header{
 }
 .info .section h1{
     font-family:'Oswald', sans-serif;
-
 }
 .rooms-section{
-    background-size:cover;
+    position:relative;
     width:100%;
     min-height:100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/5.jpg);
     background-position: center; 
-    position:relative;
+    background-size:cover;
 }
 
 .rooms-section .section:before{
-    background: none;
-    border: 1px solid #fff;
-    content: "";
     display: block;
     position: absolute;
     top: 4px;
     left: 4px;
     right: -5px;
     bottom: -4px;
+    border: 1px solid #fff;
+    background: none;
+    content: "";
     pointer-events: none;
 }
 .rooms-section .section{
-    color:white;
-    min-height:30vh;
-    width:30vw;
-    top:30vh;
     position:absolute;
+    top:30vh;
     left:10vw;
-    text-align:center;
-    border:1px solid white;
+    width:30vw;
     padding:30px;
+    border:1px solid white;
+    color:white;
+    text-align:center;
 }
 .rooms-section .section p{
     margin-bottom:30px;
@@ -171,14 +161,14 @@ header{
     font-family:'Oswald', sans-serif;
 }
 .rooms-section .section .room{
-    color:white;
-    text-decoration:none;
     display:block;
+    width:fit-content;
     margin:20px;
+    border-bottom:1.5px solid transparent;
     font-size:1em;
     text-align:left;
-    width:fit-content;
-    border-bottom:1.5px solid transparent;
+    color:white;
+    text-decoration:none;
     transition:border-bottom 0.1s ease-in-out;
 }
 .rooms-section .section .room:hover {
@@ -189,34 +179,33 @@ header{
     height:60vh;
 }
 .fooddrinks-section{
-    background-size:cover;
+    position:relative;
     width:100%;
     min-height:100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/10.jpg);
     background-position: center; 
-    position:relative;
+    background-size:cover;
 }
 .fooddrinks-section .section{
-    color:white;
-    min-height:30vh;
-    width:30vw;
-    top:30vh;
     position:absolute;
+    top:30vh;
     right:10vw;
-    text-align:center;
-    border:1px solid white;
+    width:30vw;
     padding:30px;
+    border:1px solid white;
+    color:white;
+    text-align:center;
 }
 .fooddrinks-section .section:before{
-    background: none;
-    border: 1px solid #fff;
-    content: "";
-    display: block;
     position: absolute;
     top: 4px;
     left: 4px;
     right: -5px;
     bottom: -4px;
+    display: block;
+    border: 1px solid #fff;
+    background: none;
+    content: "";
     pointer-events: none;
 }
 .fooddrinks-section .section p{
@@ -230,13 +219,13 @@ header{
     .fooddrinks-section .section,
     .info .section,
     .rooms-section .section{
-        width:70vw;
-        min-height:auto;
-        margin:0 auto;
         position:relative;
         right:0;
         left:0;
         top:20vh;
+        width:70vw;
+        min-height:auto;
+        margin:0 auto;
         padding:30px;
     }
     header .main-slider .text-wrapper .text p{
@@ -244,17 +233,17 @@ header{
     }
     header .main-slider .text-wrapper .text button{
         display:block;
-        text-align:center;
         margin:0 auto;
         margin-top:20px;
+        text-align:center;
     }
     header .main-slider .text-wrapper .text{
+        position: relative;
         height:auto;
         left:0;
         right:0;
-        margin:0 auto;
-        position: relative;
         top: 50%;
+        margin:0 auto;
         transform: translateY(-80%);  
     }
    
@@ -270,7 +259,7 @@ header{
         
     }
     .main-slider .previous, .main-slider .next{
-        top:50vh;
+        top:45vh;
     }
     .book-now{
         margin-right:0px;

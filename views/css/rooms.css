@@ -1,37 +1,38 @@
 .rooms-div{
+    padding:200px 100px;
     background:url(../img/rooms_background.jpg) ;
     background-size:cover;
-    padding:200px 100px;
 }
 .rooms-div h1{
     margin:0px;
-    color:white;
     font-size:100px;
+    color:white;
 }
 .book{
-    text-align:center;
-    color:white;
     background-color:#9b7f25;
     padding:20px 0px;
     font-size:20px;
+    color:white;
+    text-align:center;
 }
 .book span{
     margin-right:40px;
 }
 .book-and-save{
-    padding:10px 30px;
-    border: 2px solid #fff;
     position: relative;
+    margin-left:10px;
+    margin-right:0px;
+    padding:5px 30px;
+    border: 2px solid #fff;
     background:transparent;
-    color:white;
     font-size:20px;
+    color:white;
     transition: all 0.5s ease-out;
 }
 .book-and-save:hover{
     color:#9b7f25;
     background-color:white;
 }
-
 .main-section{
     margin-top:10px;
 }
@@ -45,13 +46,13 @@
 }
 .main-section .room-section .room-section-content .image-section{
     max-width: 60%;
-    text-align:right;
     padding-right:50px;
+    text-align:right;
 }
 .main-section .room-section .room-section-content .image-section-right{
-    text-align:left;
     padding-right:0px;
     padding-left:30px;
+    text-align:left;
 }
 .main-section .room-section .room-section-content .image-section img{
     width:80%;
@@ -60,33 +61,33 @@
     position:absolute;
     width:400px;
     height:150px;
-    border:2px solid #9b7f25;
-    background-color:transparent;
     margin-left:-100px;
     margin-top:-50px;
-    text-align:left;
     padding:35px 0px 0px 20px;
+    border:2px solid #9b7f25;
+    background-color:transparent;
+    text-align:left;
 }
 .main-section .room-section .room-section-content .image-section .label-mobile{
     display:none;
 }
 .main-section .room-section .room-section-content .image-section .label-right{
     position:absolute;
+    right:0px;
     width:400px;
     height:150px;
+    margin-right:100px;
+    margin-top:-50px;
+    padding:35px 20px 0px 0px;
     border:2px solid #9b7f25;
     background-color:transparent;
-    margin-right:100px;
-    right:0px;
-    margin-top:-50px;
     text-align:right;
-    padding:35px 20px 0px 0px;
 }
 .main-section .room-section .room-section-content .image-section .label .line,
 .main-section .room-section .room-section-content .image-section .label-right .line{
-    background-color:#9b7f25;
     width:50px;
     height:3px;
+    background-color:#9b7f25;
 }
 .main-section .room-section .room-section-content .image-section .label-right .line{
     position: absolute;
@@ -94,13 +95,13 @@
 }
 .main-section .room-section .room-section-content .image-section .label .tonights-rate,
 .main-section .room-section .room-section-content .image-section .label-right .tonights-rate{
-    font-size:20px;
     margin:20px 0px 5px 0px;
+    font-size:20px;
 }
 .main-section .room-section .room-section-content .image-section .label .price,
 .main-section .room-section .room-section-content .image-section .label-right .price{
-    font-size:40px;
     margin:0px;
+    font-size:40px;
 }
 .main-section .room-section .room-section-content .image-section-mobile{
     display:none;
@@ -108,17 +109,16 @@
 .main-section .room-section .room-section-content .text-section{
     max-width:40%;
 }
-
 .main-section .room-section .room-section-content .text-section h2{
     letter-spacing:5px;
 }
 .main-section .room-section .room-section-content .text-section .book-room-now{
-    color:#193663;
-    background-color:transparent;
-    border:2px solid #193663;
     padding:10px 40px;
+    border:2px solid #193663;
     font-weight:bold;
     text-decoration: none;
+    color:#193663;
+    background-color:transparent;
     transition: all 0.5s ease-out;
 }
 .main-section .room-section .room-section-content .text-section .book-room-now:hover{
@@ -130,7 +130,6 @@
     outline: 0;
 }
   
-
 @media(max-width:996px){
     .rooms-div{
         padding:200px 0px;
@@ -155,21 +154,20 @@
         position:relative;
     }
     .main-section .room-section .room-section-content .image-section .label-mobile,
-    .main-section .room-section .room-section-content .image-section-right .label-mobile
-    {
-        display:block;
-        background-color:#9b7f25;
-        color:white;
-        font-size:20px;
-        padding:10px 30px;
-        width:20%;
+    .main-section .room-section .room-section-content .image-section-right .label-mobile{
         position:absolute;
         bottom:0px;
         right:0px;
+        display:block;
+        width:20%;
+        padding:10px 30px;
+        color:white;
+        background-color:#9b7f25;
+        font-size:20px; 
     }
     .main-section .room-section .room-section-content{
-        padding:20px;
         display:block;
+        padding:20px;
     }
     .main-section .room-section:nth-of-type(2) .room-section-content .image-section{
         display:none;
@@ -183,7 +181,6 @@
     .main-section .room-section .room-section-content .image-section img{
         width:100%;
     }
-    .main-section .room-section .room-section-content .text-section{}
     .main-section .room-section .room-section-content .text-section p{
         text-align:justify;
     }
@@ -191,6 +188,19 @@
     .main-section .room-section .room-section-content .text-section{
         min-width:100%;
         text-align:center;
-
+    }
+}
+@media (min-width:996px) and (max-width:1024px){
+    .main-section .room-section .room-section-content .image-section img{
+        width:100%;
+    }
+    .main-section .room-section .room-section-content .image-section .label{
+        margin-left:-150px;
+    }
+    .main-section .room-section .room-section-content .image-section .label-right{
+        margin-right:50px;
+    }
+    .main-section .room-section .room-section-content{
+        padding:100px 175px;
     }
 }

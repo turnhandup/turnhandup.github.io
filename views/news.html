@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Amenities</title>
-        <link href="css/main.css" rel="stylesheet" type="text/css">
-        <link href="css/amenities.css" rel="stylesheet" type="text/css">
-        <script src="js/main.js"></script>
-
-        <!-- FONTS -->
-        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:100,200,300,400,500,700,800" rel="stylesheet">
+        <title>News | Anvil Hotel</title>
+        <link rel="icon" href="img/logo.png">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
 
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link href="css/news.css" rel="stylesheet" type="text/css">
+        <script src="js/main.js"></script>
+        <script src="js/news.js"></script>
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:100,200,300,400,500,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
     </head>
     <body>
- <header>
+                          <header>
             <div class="menu-wrapper">
                 <ul class="menu">
                     <span class="left">
@@ -59,19 +58,29 @@
             </div>
         </header>
         <main>
-            <div class="text">
-                <h1>AMENITIES</h1>
+            <div class="search-panel-wrapper">
+                <div id="filter-buttons-wrapper">
+                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('films')"> Films</button>
+                    <button class="btn" onclick="filterSelection('brunch')"> Brunch</button>
+                    <button class="btn" onclick="filterSelection('dance')"> Dance</button>
+                    <button class="btn" onclick="filterSelection('board games')"> Board games</button>
+                    <button class="asc" id="asc" onclick="nameAscending(newsArray)">Asc by Name</button>
+                    <button class="desc" id="desc" onclick="nameDescending(newsArray)">Desc by Name</button>
+                </div>
+                
+                
+                <input type="text" id="search"> 
+                <button type="submit" class="search-button" onclick="search('dance')">Search</button>
+            
             </div>
-            <div class="images">
-                <img src="img/amenities/1.jpg">
-                <img src="img/amenities/2.jpg">
-                <img src="img/amenities/3.jpg">
-                <img src="img/amenities/4.jpg">
-                <img src="img/amenities/5.jpg">
-                <img src="img/amenities/6.jpg">
-                <img src="img/amenities/7.jpg">
-                <img src="img/amenities/8.jpg">
-                <img src="img/amenities/9.jpg">
+            <div class="news grid" id="news">
+                
+            </div>
+            <div class="pagination">
+                <a href="javascript:prevPage()" id="prev">Prev</a>
+                <span id="page"></span> / <span id="pages"></span>
+                <a href="javascript:nextPage()" id="next">Next </a>
             </div>
         </main>
         <footer>

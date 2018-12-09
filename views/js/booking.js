@@ -1,5 +1,13 @@
 var roomsArray =[]
+var order =[];
 
+function getJsonFromUrl(url_string) {
+    var url = new URL(url_string);
+    var c = url.searchParams.get("error");
+    if(c==="error"){
+        document.getElementById("error").style.display="block";
+    }
+}
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
@@ -11,9 +19,6 @@ function readTextFile(file, callback) {
     }
     rawFile.send(null);
 }
-
-
-
 function hasDateConflict(orderStartDate, orderEndDate, startDate, endDate){
     if(orderEndDate<orderStartDate){
         return true;
@@ -27,21 +32,8 @@ function hasDateConflict(orderStartDate, orderEndDate, startDate, endDate){
     else{
         return false;
     }
-    // return !
-    // return !((orderStartDate>endDate||orderStartDate<startDate)&&(orderEndDate<startDate||orderEndDate>endDate))
-    // &&((startDate>orderEndDate||startDate<orderStartDate)&&(endDate<orderStartDate||endDate>orderStartDate));
 }
-var order1={
-    "type":"Single King",
-    "booking":
-        {
-            "startDate":"2018-12-15 15:00",
-            "endDate":"2018-12-17 11:00",
-            "name":"Josh",
-            "phonenumber":"+380653085325",
-            "email":"turnhandup@gmail.com"
-        }
-};
+
 function checkRoomsAviability(rooms, order){
     var orderStartDate=order.booking.startDate;  
     var orderEndDate=order.booking.endDate;  
@@ -64,7 +56,6 @@ function isAvailableForBooking(room, orderStart, orderEnd){
         var orderStartDate = new Date(orderStart);  
         var orderEndDate = new Date(orderEnd);  
         if(hasDateConflict(orderStartDate, orderEndDate, startDate, endDate)){
-            console.log("DATA CONFLICT");
             return false;
         }  
     }
@@ -72,9 +63,7 @@ function isAvailableForBooking(room, orderStart, orderEnd){
 }
 function createOrder(){
     var checkInDate = document.getElementById("dateCheckIn").value +" 15:00";
-    // var checkInDate = new Date(document.getElementById("dateCheckIn").value +" 15:00");
     var checkOutDate = document.getElementById("dateCheckOut").value +" 11:00";
-    // var checkOutDate = new Date(document.getElementById("dateCheckOut").value +" 11:00");
     var select = document.getElementById("type");
     var type=select.options[select.selectedIndex].value; 
     var name = document.getElementById("name").value; 
@@ -93,22 +82,37 @@ function createOrder(){
     };
     return bookingOrder;
 }
-var order =[];
+function changeDatepickerStartDate(datepickerId){
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1;
+    var yyyy = today.getFullYear();
+     if(dd<10){
+            dd='0'+dd
+        } 
+        if(mm<10){
+            mm='0'+mm
+        } 
+    
+    today = yyyy+'-'+mm+'-'+dd;
+    document.getElementById(datepickerId).setAttribute("min", today);
+}
 var saveData=function(text){
     var data = JSON.parse(text);
     roomsArray=data.rooms;
-
+    console.log(roomsArray);
 };
+// module.exports = checkRoomsAviability(roomsArray, order);
 
 window.onload = function() {
-    readTextFile("json/rooms.json", saveData);
-
-    var submit = document.getElementById("submit");
-    submit.onclick=function(){
-    var order=createOrder();
-    console.log(checkRoomsAviability(roomsArray,order));
-    console.log(roomsArray);
-
-    }
+    console.log(getJsonFromUrl(window.location.href));
+    // readTextFile("json/rooms.json", saveData);
+    // changeDatepickerStartDate("dateCheckIn");
+    // var submit = document.getElementById("submit");
+    // submit.onclick=function(){
+    //     console.log("clicked");
+    //     var order=createOrder();
+    //     checkRoomsAviability(roomsArray, order);
+    // }
 };
 

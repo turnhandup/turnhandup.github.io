@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Double Queen</title>
+        <title>Double Queen | Anvil Hotel</title>
+        <link rel="icon" href="img/logo.png">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
         <link href="css/main.css" rel="stylesheet" type="text/css">
         <link href="css/room.css" rel="stylesheet" type="text/css">
         <script src="js/main.js"></script>
 
-        <!-- FONTS -->
-        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Montserrat:100,200,300,400,500,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     </head>
     <body>
@@ -62,8 +60,12 @@
         <main>
             <div class="main-slider"> 
                 <div class="slide fade">
-                    <img src="img/doublequeen/3.jpg">
-                    <div class="text">Double Queen</div>
+                    <img data-object-fit="none" data-object-position="25% 75%" src="img/doublequeen/3.jpg">
+                    <div class="text">Double Queen
+                        <div>                        
+                            <button class="book-now"><a href="booking.html">BOOK NOW</a></button>
+                        </div>
+                    </div>
                 </div>
                 <div class="slide fade">
                     <img src="img/doublequeen/2.jpg">
@@ -121,6 +123,14 @@
                 <p>Gale South Beach, 1690 Collins Avenue, Miami Beach, FL</p>
             </div>
         </footer>
+        <script>
+                objectFit.polyfill({
+                    selector: 'img', // this can be any CSS selector
+                    fittype: 'cover', // either contain, cover, fill or none
+                    disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
+                });
+            </script>
         <script src="js/slider.js"></script>
+        
     </body>
 </html>

@@ -130,8 +130,6 @@ function showRoomsMobile() {
             ],
             {name: 'Sand'});
 
-        // Create a map object, and include the MapTypeId to add
-        // to the map type control.
         var myLatLng ={lat: 25.792638, lng: -80.130019};
 
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -148,7 +146,6 @@ function showRoomsMobile() {
           map:map,
           title: 'Gale South Beach'
         });
-        //Associate the styled map with the MapTypeId and set it to display.
         map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
-      }
+}

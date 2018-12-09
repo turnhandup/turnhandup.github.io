@@ -1,0 +1,35 @@
+main{
+    min-height:100vh;
+    text-align:center;
+    background-image:url("../img/contact_background.jpg");
+    margin-top:-40px;
+}
+main .message-wrapper{
+    width:50%;
+    margin:0 auto;
+    padding-top:30vh;
+
+}
+main .message-wrapper .message{
+    background-color:rgba(91, 90, 86, 0.7);
+    padding:50px;
+}
+main h1{
+    text-transform: uppwercase;
+    color:white;
+    font-family:"Oswald", sans-serif;
+    font-size:3em;
+}
+main p{
+    text-align:middle;
+    margin:0 auto;
+    font-size:1.2em;
+    color:white;
+    font-weight:300;   
+}
+
+@media(max-width:576px){
+    main .message-wrapper{
+        width:90%;
+    }
+}
