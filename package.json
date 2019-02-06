@@ -1,0 +1,29 @@
+{
+  "name": "project_poliakova",
+  "version": "1.0.0",
+  "description": "",
+  "main": "settings.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "consolidate": "^0.15.1",
+    "express": "^4.16.4",
+    "moustache": "^0.0.2",
+    "object-fit": "^0.4.3",
+    "object-fit-polyfill": "^0.1.0",
+    "objectFitPolyfill": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turnhandup/turnhandup.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turnhandup/turnhandup.github.io/issues"
+  },
+  "homepage": "https://github.com/turnhandup/turnhandup.github.io#readme"
+}

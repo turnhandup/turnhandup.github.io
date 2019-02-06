@@ -1,0 +1,530 @@
+@font-face {
+    font-family: AGaramondPro;
+    src: url(fonts/AGaramondPro-Bold.otf);
+}
+body{
+    font-family: AGaramondPro;
+}
+.external-wrapper{
+    display:table;
+    width:100%;
+}
+.inner-wrapper{
+    display: table-cell;
+    vertical-align: middle;
+}
+.section{
+    display: table;
+    text-align:center;
+    width:98vw;
+}
+.middle{
+    display:table-cell;
+    height:50vh;
+    vertical-align: middle;
+}
+.top p, .bottom{
+    font-size:2.5vh;
+    letter-spacing: 0.3vw;
+}
+
+.middle .lines{
+    margin:0vh 5vw 0 5vw;
+    padding-top:30px;
+    position:relative;
+    top:2vh;
+}
+.middle .work, .middle .contact{
+    letter-spacing:1vw;
+    font-size:2.7vh;
+}
+.middle span a{
+    text-decoration:none;
+    color:black;
+}
+.figures img{
+    width:1.2vw;
+    height:1.2vw;
+}
+.figures-wrapper.figures-wrapper-two{
+    width:6vw;
+}
+
+.figures img:nth-of-type(1){
+    margin-right:0.4vw;
+    margin-top:0.4vw;
+}
+.apple{
+    width:1.3vw;
+    height:1.3vw;
+    margin-left:1vw;
+
+}
+.figures-wrapper{
+    width:5vw;
+    display:inline-block;
+}
+.lines img{
+    width:6vw;
+    height:6vh;
+}
+.bottom .plus {
+    width: 6vw;
+    height: 6vh;
+    margin: 0px 0vw;
+    position: relative;
+    top: 6vh;
+}
+.bottom span:nth-of-type(2){
+    float:left;
+    width:45%;
+    text-align:right;
+    position: relative;
+    top:7.5vh;
+}
+.bottom span:nth-of-type(3){
+    float:left;
+    width:10%;
+    text-align:center;
+}
+.bottom span:nth-of-type(4){
+    float:left;
+    width:45%;
+    text-align:left;
+    position: relative;
+    top:7.5vh;
+}
+@media(max-width:576px){
+    .figures-wrapper.figures-wrapper-two{
+        display:none;
+    }
+    .section:nth-of-type(1){
+        display:none;
+    }
+    .section:nth-of-type(2){
+        margin-top:7vh;
+        height:50vh;
+    }
+    .figures img{
+        width:4vw;
+        height:4vw;
+    }
+    .figures .row img{
+        margin-left:-5vw;
+    }
+    .figures img:nth-of-type(1){
+        margin-right:1vw;
+        margin-top:1vw;
+    }
+    .figures-wrapper, .lines{
+        width:100%;
+        display:block;
+        margin-left:0;
+        margin-right:0;
+    }
+    .lines img{
+        width:11vw;
+        height:11vw;
+    }
+    .middle .lines{
+        margin:8vh 0vw 8vh 0vw;
+        padding-top:0px;
+    }
+    .middle .work, .middle .contact{
+        letter-spacing:4vw;
+        font-size:2.5vh;
+    }
+    .apple{
+        width:5vw;
+        height:3.7vw;
+    }
+ 
+    .bottom{
+        vertical-align: bottom;
+        font-size:2.3vh;
+    }
+    .three{
+        position: absolute;
+        bottom:3vh;
+    }
+    .bottom .plus{
+        width: 10vw;
+        height: 10vh;
+        margin: 0px 4vw;
+        position: relative;
+        top: 4vh;
+    }
+    .bottom span:nth-of-type(2){
+        float:left;
+        width:40%;
+        text-align:right;
+        position: relative;
+        top:7.5vh;
+    }
+    .bottom span:nth-of-type(3){
+        float:left;
+        width:20%;
+        text-align:center;
+    }
+    .bottom span:nth-of-type(4){
+        float:left;
+        width:40%;
+        text-align:left;
+        position: relative;
+        top:7.5vh;
+    }
+}
+@media(min-width:576px) and (max-width:1025px){
+    .figures-wrapper.figures-wrapper-two{
+        display:none;
+    }
+    .section{
+        height:15vh;
+    }
+    .section:nth-of-type(2){
+        margin-top:0vh;
+    }
+    .three{
+        position: absolute;
+        bottom:0vh;
+    }
+    .lines{
+        width:15vw;
+        display:inline-block;
+    }
+    .middle .lines{
+        margin:8vh 0vw 8vh 0vw;
+        padding-top:0px;
+    }
+    .figures-wrapper, .lines{
+        width:100%;
+        display:block;
+        margin-left:0;
+        margin-right:0;
+    }
+    .figures img{
+        width:4vw;
+        height:4vw;
+    }
+    .figures .row img{
+        margin-left:-4.4vw;
+    }
+    .figures img:nth-of-type(1){
+        margin-right:1vw;
+        margin-top:1vw;
+    }
+    .apple{
+        width:4vw;
+        height:4vw;
+    }
+ 
+    .bottom{
+        font-size:2.3vh;
+    }
+    .bottom .plus{
+        width: 10vw;
+        height: 10vh;
+        margin: 0px 4vw;
+        position: relative;
+        top: 4vh;
+    }
+    .bottom span:nth-of-type(2){
+        float:left;
+        width:25%;
+        margin-left:15%;
+        text-align:center;
+        position: relative;
+        top:7.5vh;
+    }
+    .bottom span:nth-of-type(3){
+        float:left;
+        width:20%;
+        text-align:center;
+    }
+    .bottom span:nth-of-type(4){
+        float:left;
+        width:25%;
+        margin-right:15%;
+        text-align:center;
+        position: relative;
+        top:7.5vh;
+    }
+
+}
+@media(min-width:576px){
+    .figures-wrapper-one,
+    .lines-one, 
+    .lines-two, 
+    .work-apple, 
+    .contact, 
+    .llc, 
+    .session,
+    .plus-span,
+    .number {
+        opacity:0;
+    }
+    #triangle-two {  
+        opacity:0;
+        animation-duration: 1s;
+        animation-name: fadeAndScale1;
+        animation-timing-function:  linear;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+
+    }
+    #square-two{  
+        opacity:0;
+        animation-duration: 1s;
+        animation-name: fadeAndScale2;
+        animation-timing-function:  linear;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+
+    }
+    #circle-two {  
+        opacity:0;
+        animation-duration: 1s;
+        animation-name: fadeAndScale3;
+        animation-timing-function:  linear;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+
+    }
+    .figures-wrapper-one{
+        animation-delay:1s;
+        animation-duration: .3s;
+        animation-name: fadeAndScale4;
+        animation-fill-mode: forwards;
+        animation-timing-function:  linear;
+        animation-direction: alternate;
+
+    }
+    .lines-one{
+        animation-delay:1.2s;
+        animation-duration: .5s;
+        animation-name: fadeAndScale4;
+        animation-fill-mode: forwards;
+        animation-timing-function:  linear;
+        animation-direction: alternate;
+
+    }
+    .lines-two{
+        animation-delay:1.4s;
+        animation-duration: .5s;
+        animation-name: fadeAndScale4;
+        animation-fill-mode: forwards;
+        animation-timing-function:  linear;
+        animation-direction: alternate;
+
+    }
+   
+    .work-apple{
+        display:inline-block;
+        animation-delay:1.2s;
+        animation-duration: .5s;
+        animation-name: fadeAndScale5;
+        animation-fill-mode: forwards;
+        animation-timing-function:  linear;
+        animation-direction: alternate;
+
+    }
+    .contact{
+        display:inline-block;
+        animation-delay:.8s;
+        animation-duration:.5s;
+        animation-name: fadeAndScale5;
+        animation-fill-mode: forwards;
+        animation-timing-function:  linear;
+        animation-direction: alternate;
+
+    }
+    .llc{
+        display:inline-block;
+        animation-delay:1.5s;
+        animation-duration: .5s;
+        animation-name: fadeAndScale5;
+        animation-fill-mode: forwards;
+        animation-timing-function:  linear;
+        animation-direction: alternate;
+
+    }
+    .session,
+    .plus-span,
+    .number{
+        animation-delay:1.5s;
+        animation-duration: .5s;
+        animation-name: fadeAndScale6;
+        animation-fill-mode: forwards;
+        animation-timing-function:  linear;
+        animation-direction: alternate;
+
+    }
+    .figures-wrapper.figures-wrapper-two{
+        position: absolute;
+        top:49%;
+        left:47%;
+    }
+    .figures-two img:nth-of-type(1),
+    .figures-two img:nth-of-type(2){
+        margin-right:0.4vw;
+        margin-top:0.4vw;
+    }
+    @keyframes fadeAndScale1 {
+        0% {
+            opacity: 0;
+            transform: scale(0.7, 0.7);
+        }
+       
+        13%{
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+        96%{
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+        100%{
+            opacity: 0;
+            transform: scale(1, 1);
+        }
+       
+    }
+    @keyframes fadeAndScale2 {
+        5% {
+            opacity: 0;
+            transform: scale(0.7, 0.7);
+        }
+       
+        23%{
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+        95%{
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+        97%{
+            opacity: 0;
+        }
+       
+    }
+    @keyframes fadeAndScale3 {
+        15% {
+            opacity: 0;
+            transform: scale(0.7, 0.7);
+        }
+        33%{
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+        90%{
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+        96%{
+            opacity: 0;
+            transform: scale(1, 1);
+        }
+       
+    }
+    @keyframes fadeAndScale4 {
+        15% {
+            opacity: 0;
+            transform: scale(0.7, 0.7);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+       
+    }
+    @keyframes fadeAndScale5 {
+        0% {
+            opacity: 0;
+            transform: scale(0.7, 0.7);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+       
+    }
+    @keyframes fadeAndScale6 {
+        0% {
+            opacity: 0;
+            transform: scale(0.7, 0.7);
+
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+       
+    }
+
+
+
+}
+@media(min-width:1025px) {
+    .section:nth-of-type(2){
+        margin-top:-3vh;
+        margin-bottom:-3vh;
+    }
+    .middle .lines:nth-of-type(1){
+        margin:0vh 5vw 0vh 8vw;
+    }
+    .middle .lines:nth-of-type(2){
+        margin:0vh 5vw 0vh 5vw;
+    }
+    .top p, .bottom{
+        font-size:2vh;
+        letter-spacing: 0.3vw;
+    }
+    .figures-wrapper{
+        position:relative;
+        top:1.2vw;
+        text-align:left;
+    }
+    .inner-wrapper{
+        height:96vh;
+    }
+    .rect{
+        left: 0.025vw;
+        position: relative;
+        bottom: 0.025vw;
+    }
+    .bottom span:nth-of-type(2){
+        float:left;
+        width:15%;
+        margin-left:32%;
+        text-align:center;
+        position: relative;
+        top:7.5vh;
+    }
+    .bottom span:nth-of-type(3){
+        float:left;
+        width:6%;
+        text-align:center;
+    }
+    .bottom span:nth-of-type(4){
+        float:left;
+        width:13%;
+        margin-right:34%;
+        text-align:center;
+        position: relative;
+        top:7.5vh;
+    }
+   
+}
+@media(min-width:1980px){
+    .figures .rect{
+        width:1.15vw;
+        height:1.15vw;
+    }
+    .apple{
+        width:1.3vw;
+        height:1.3vw;
+        margin-left:1vw;
+    }
+    
+}

@@ -102,17 +102,8 @@ var saveData=function(text){
     roomsArray=data.rooms;
     console.log(roomsArray);
 };
-// module.exports = checkRoomsAviability(roomsArray, order);
 
 window.onload = function() {
-    console.log(getJsonFromUrl(window.location.href));
-    // readTextFile("json/rooms.json", saveData);
-    // changeDatepickerStartDate("dateCheckIn");
-    // var submit = document.getElementById("submit");
-    // submit.onclick=function(){
-    //     console.log("clicked");
-    //     var order=createOrder();
-    //     checkRoomsAviability(roomsArray, order);
-    // }
+    getJsonFromUrl(window.location.href);
 };
 

@@ -11,7 +11,7 @@ var appRouter = function (app) {
     checkRoomsAviability(roomsArray, order);
     
     var resultData=JSON.stringify(roomsArray, null,2);
-    fs.writeFile("./views/json/rooms.json", resultData, finished);
+    fs.writeFile("./views/json/rooms.json", resultData);
     if(checkRoomsAviability(roomsArray, order)===null){
       res.redirect("booking.html?error=error");
     }
