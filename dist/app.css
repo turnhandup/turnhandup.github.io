@@ -35,7 +35,7 @@
   font-style: normal; }
 
 body {
-  background: #E5E9F2;
+  background: white;
   font-family: 'Lato';
   color: #47525E;
   font-size: 16px;
@@ -55,6 +55,10 @@ body {
   .mymenu .nav-link {
     color: #47525E !important; }
 
+@media (max-width: 1024px) {
+  .mymenu {
+    justify-content: center; } }
+
 .main {
   margin: 0 auto;
   text-align: center;
@@ -69,7 +73,9 @@ body {
     border-radius: 5px;
     color: white;
     width: 192px;
-    height: 50px; }
+    height: 50px;
+    vertical-align: middle;
+    line-height: 35px; }
 
 .footer {
   background-color: #47525E;
@@ -81,7 +87,8 @@ body {
   .footer .mymenu__logo {
     margin-top: 10px; }
   .footer__paragraph {
-    margin-left: -15px; }
+    margin-left: -15px;
+    margin-top: 15px; }
   .footer__button {
     background-color: white;
     border-radius: 5px;
@@ -98,4 +105,91 @@ body {
     margin: 25px 25px 20px 0; }
     .footer__icons a img {
       width: 19px; }
+
+@media (max-width: 1024px) {
+  .mymenu__logo {
+    margin-right: 0px; }
+  .footer__wrapper {
+    text-align: center; }
+  .footer__input {
+    margin: 0 auto; }
+  .footer__button {
+    margin: 10px auto; }
+  .footer__icons {
+    justify-content: center;
+    margin-left: 0; } }
+
+.first {
+  color: #47525E;
+  width: 100%; }
+  .first__paragraph {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 60px; }
+  .first__title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 95px;
+    margin-top: 85px; }
+
+.progress-block {
+  display: flex;
+  margin-top: 100px;
+  min-height: 100vh;
+  text-align: center; }
+  .progress-block__button {
+    color: white;
+    background-color: #47525E;
+    width: 190px;
+    padding: 12px 40px;
+    border-radius: 5px;
+    border: 0px solid; }
+    .progress-block__button:hover {
+      color: white;
+      text-decoration: none; }
+  .progress-block__bar {
+    background-color: #E5E9F2;
+    width: 400px;
+    margin: 0 auto 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+    transition: all 1s ease-in-out; }
+    .progress-block__bar-item {
+      height: 8px;
+      background-color: #47525E; }
+
+.second {
+  display: none;
+  color: #47525E;
+  width: 100%; }
+  .second__paragraph {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 40px; }
+  .second__button {
+    margin-top: 50px; }
+  .second__video {
+    max-height: 400px;
+    max-width: 600px;
+    margin: 0 auto; }
+
+.third {
+  display: none; }
+  .third__paragraph {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 40px; }
+  .third__image {
+    background-color: #E5E9F2;
+    height: 230px;
+    width: 90%;
+    margin: 0 auto; }
+    .third__image-description {
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 35px; }
+  .third .row {
+    margin-bottom: 50px; }
 
