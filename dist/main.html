@@ -1,12 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Index of - FED Workshop</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link href="app.css" rel="stylesheet"></head>
 <body>
-    Empty for now
+    <header class="header row container-fluid row px-0 mx-0">
+        <div class="col-1 header__left"></div>
+        <div class="header__wrapper col-11 d-flex flex-row-reverse container-fluid row">
+            <div class="col-1 avatar-wrapper ">
+                <img src="images/avatar.png" class="header__avatar">
+                <p class="header__title">John</p>
+            </div>
+        </div>
+    </header>
+    <main class="workaround row container-fluid px-0 mx-0">
+        <div class="col-1 workaround__left">
+            <img src="images/layour.png" alt="" class="workaround__icon">
+            <img src="images/home.png" alt="" class="workaround__icon">
+            <img src="images/dialog.png" alt="" class="workaround__icon">
+            <img src="images/info.png" alt="" class="workaround__icon">
+        </div>
+        <div class="col-3 workaround__middle mx-0 px-0">
+            <div class="workaround__middle_directory ">
+                <div class="workaround__middle_directory-header">
+                    <p class="workaround__middle_directory-title">Mktplace  Files</p>
+                    <i class="fas fa-chevron-up"></i>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="workaround__middle_directory-structure">
+                    <ul>
+                        <li><img class="workaround__middle_directory-icon" src="images/folder.png">John's Mktplace</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="workaround__middle_directory ">
+                <div class="workaround__middle_directory-header">
+                    <p class="workaround__middle_directory-title">G Drive Files</p>
+                    <i class="fas fa-chevron-up"></i>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="workaround__middle_directory-structure">
+                    <ul>
+                        <li><img class="workaround__middle_directory-icon" src="images/folder.png">My personal files</li>
+                        <ul>
+                            <li>Wedding list</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>   
+            <div class="workaround__middle_directory ">
+                    <div class="workaround__middle_directory-header">
+                        <p class="workaround__middle_directory-title">Dropbox Files</p>
+                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="workaround__middle_directory-structure">
+                        <ul>
+                            <li><img class="workaround__middle_directory-icon" src="images/folder.png">My work files</li>
+                            <ul>
+                                <li>Sales Template</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>       
+         </div>
+        <div class="col-8 workaround__main mr-0 pr-0">
+            <div class="row workaround__main_top mr-0 pr-0">
+                <p class="col-9 workaround__main_paragraph">John's mktplace ></p>
+                <div class="col-3 text-right">
+                    <form id="target" action="main.html">
+                        <label for="file" class="workaround__main_input">+ Add file</label>
+                        <input type="file" id="file" name="file" multiple>
+                    </form>
+                </div>
+            </div>
+            <div class="workaround__main_content">
+
+            </div>
+        </div>
+    </main>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+     crossorigin="anonymous"></script>
+     <script>
+        $( document ).ready(function() {
+            $('.workaround__middle_directory-header').on('click', function (){
+                $(".workaround__middle_directory-structure").removeClass("selected");
+                $(this).siblings(".workaround__middle_directory-structure").addClass("selected");
+                $(".fa-chevron-up").removeClass("up");
+                $(".fa-chevron-down").removeClass("down");
+
+                $('.selected').toggle('slow');
+
+                $(this).children('.fa-chevron-up').addClass("up");
+                $(".up").toggle();
+                $(this).children('.fa-chevron-down').addClass("down");
+                $(".down").toggle();
+            });
+            $('#target').submit(function () {
+                return false;
+            });
+            $('#file').change(function() {
+                $('#target').submit();
+            });
+            
+        });
+      
+     </script>
 <script type="text/javascript" src="app.bundle.js"></script></body>
+
 </html>

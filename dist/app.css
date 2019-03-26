@@ -193,3 +193,74 @@ body {
   .third .row {
     margin-bottom: 50px; }
 
+.header {
+  border-bottom: 1px solid #E5E9F2; }
+  .header__wrapper {
+    display: block; }
+  .header__left {
+    border-right: 1px solid #E5E9F2; }
+  .header .avatar-wrapper {
+    text-align: center; }
+  .header__avatar {
+    max-height: 60px;
+    max-width: 60px; }
+  .header__title {
+    color: #8190A5;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+
+.workaround {
+  min-height: 88vh; }
+  .workaround__left, .workaround__middle {
+    border-right: 1px solid #E5E9F2; }
+    .workaround__left_directory-header, .workaround__middle_directory-header {
+      padding: 25px 5%;
+      border-bottom: 1px solid #E5E9F2; }
+      .workaround__left_directory-header p, .workaround__middle_directory-header p {
+        display: inline-block;
+        width: 90%;
+        margin: 0px; }
+      .workaround__left_directory-header i, .workaround__middle_directory-header i {
+        text-align: right;
+        color: #E5E9F2; }
+      .workaround__left_directory-header .fa-chevron-up, .workaround__middle_directory-header .fa-chevron-up {
+        display: none; }
+    .workaround__left_directory-structure, .workaround__middle_directory-structure {
+      display: none;
+      background-color: #F9FAFC;
+      padding: 20px;
+      min-height: 150px; }
+      .workaround__left_directory-structure li, .workaround__middle_directory-structure li {
+        list-style-type: none;
+        color: #8190A5;
+        font-size: 14px; }
+    .workaround__left_directory-icon, .workaround__middle_directory-icon {
+      width: 20px;
+      margin: 10px;
+      margin-top: 5px;
+      margin-left: -10px; }
+  .workaround__icon {
+    max-height: 40px;
+    max-width: 40px;
+    display: block;
+    margin: 25px auto; }
+  .workaround__main_top {
+    border-bottom: 1px solid #E5E9F2;
+    padding: 20px 30px 0px 30px; }
+  .workaround__main_paragraph {
+    color: #47525E;
+    font-size: 26px;
+    font-weight: 700; }
+  .workaround__main_input {
+    border: 2px solid #47525E;
+    border-radius: 5px;
+    padding: 5px 30px; }
+  .workaround__main_content {
+    background: url(images/drop.png) no-repeat center;
+    height: 80%;
+    width: 100%;
+    background-size: 40%; }
+  .workaround #file {
+    display: none; }
+
