@@ -41,6 +41,21 @@ body {
   font-size: 16px;
   margin: 0 auto; }
 
+::-webkit-scrollbar {
+  width: 5px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8190A5; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #47525E; }
+
 .mymenu {
   margin-top: 30px;
   margin-bottom: 30px; }
@@ -264,7 +279,7 @@ body {
   .workaround #file {
     display: none; }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   .workaround__left {
     display: flex;
     justify-content: center;
@@ -274,6 +289,10 @@ body {
     max-width: 100%; }
   .workaround__icon {
     text-align: center; } }
+
+@media (min-width: 768px) {
+  .workaround__left {
+    display: block; } }
 
 .main-second {
   background-color: #F9FAFC;
@@ -286,8 +305,9 @@ body {
     font-weight: 700;
     line-height: 33px; }
   .main-second__card {
+    word-wrap: break-word;
     background-color: white;
-    padding: 50px;
+    padding: 50px 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
@@ -297,6 +317,7 @@ body {
     align-items: center;
     justify-content: center; }
   .main-second__title, .main-second__subtitle {
+    word-wrap: break-word;
     flex-basis: 100%;
     color: #47525E; }
   .main-second__title {
@@ -325,4 +346,131 @@ body {
     background-color: white; }
   .main-second table thead tr {
     background-color: #F9FAFC !important; }
+
+.main-third {
+  background-color: #EEF2F7;
+  display: none; }
+  .main-third__left-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #47525E;
+    padding-top: 30px;
+    padding-bottom: 10px; }
+  .main-third__left-search {
+    background: url(images/search.png) no-repeat scroll 0px 7px;
+    background-size: 20px;
+    padding: 5px 10px 10px 30px;
+    border: none;
+    border-bottom: 2px solid #E5E9F2;
+    width: 100%; }
+    .main-third__left-search::placeholder {
+      color: #8190A5; }
+    .main-third__left-search:focus {
+      outline: none; }
+  .main-third__left-card {
+    background-color: white;
+    margin: 10px 10px 10px 0;
+    padding: 30px 0;
+    max-height: 150px; }
+    .main-third__left-card-wrapper {
+      min-height: 67vh;
+      max-height: 67vh;
+      height: 67h;
+      overflow-y: auto; }
+    .main-third__left-card-image {
+      max-height: 46px;
+      max-width: 46px;
+      align-self: center; }
+    .main-third__left-card-name {
+      color: #47525E;
+      font-size: 14px;
+      font-weight: 700; }
+    .main-third__left-card-message {
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 0; }
+    .main-third__left-card-date {
+      font-size: 12px;
+      font-weight: 400; }
+    .main-third__left-card-notification {
+      color: white;
+      font-size: 12px;
+      background-color: red;
+      padding: 5px;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      line-height: 10px;
+      border-radius: 10px;
+      margin-bottom: 0; }
+      .main-third__left-card-notification-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; }
+  .main-third__right-chat {
+    max-height: 60vh;
+    height: 60vh;
+    overflow-y: auto;
+    min-height: 60vh; }
+  .main-third__right-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: -10px; }
+  .main-third__right-subtitle {
+    border-bottom: 2px solid #E5E9F2; }
+  .main-third__right-incoming-avatar {
+    max-width: 46px;
+    max-height: 46px; }
+    .main-third__right-incoming-avatar-wrapper {
+      text-align: center; }
+      .main-third__right-incoming-avatar-wrapper p {
+        font-size: 12px; }
+  .main-third__right-incoming-message {
+    font-size: 14px; }
+    .main-third__right-incoming-message-wrapper-start, .main-third__right-incoming-message-wrapper {
+      height: fit-content;
+      background-color: #E5E9F2;
+      border-radius: 100px;
+      font-style: 12px;
+      padding: 16px 20px; }
+  .main-third__right-personal {
+    margin: 5px 0;
+    font-size: 14px; }
+    .main-third__right-personal-message {
+      background-color: #00A6FF;
+      color: white;
+      border-radius: 100px;
+      padding: 13px 20px; }
+      .main-third__right-personal-message-wrapper {
+        justify-content: flex-end;
+        margin-top: -20px; }
+  .main-third .message {
+    border-radius: 100px;
+    margin: 0 auto; }
+  .main-third .message-button {
+    border-radius: 100px;
+    background-color: #00A6FF;
+    color: white;
+    border: none; }
+
+@media (max-width: 769px) {
+  .main-third__left-card-wrapper {
+    height: unset;
+    min-height: unset;
+    max-height: unset; }
+  .main-third__right-incoming-avatar-wrapper {
+    display: none; }
+  .main-third__right-personal-message-wrapper {
+    margin-top: 0px; }
+  .main-third__right-incoming-message-wrapper {
+    margin: 5px 0; }
+  .main-third__right-title {
+    margin-top: 10px; }
+  .main-third__left-card-wrapper {
+    display: none; } }
+
+@media (max-width: 1024px) {
+  .main-third__right-personal-message-wrapper {
+    margin-top: 0px; } }
 
