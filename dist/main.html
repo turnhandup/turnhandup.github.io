@@ -28,7 +28,10 @@
             <img src="images/dialog.png" alt="" class="workaround__icon workaround__icon-dialog">
             <img src="images/info.png" alt="" class="workaround__icon workaround__icon-info">
         </div>
-        <div class="col-3 workaround__middle workaround__main__first main-first mx-0 px-0">
+
+
+        <div class="col-12 col-md-11 mx-0 px-0 row workaround__main__first main-first ">
+        <div class="col-12 col-lg-3	 workaround__middle workaround__main__first  mx-0 px-0">
             <div class="workaround__middle_directory ">
                 <div class="workaround__middle_directory-header">
                     <p class="workaround__middle_directory-title">Mktplace  Files</p>
@@ -72,10 +75,10 @@
                     </div>
                 </div>       
          </div>
-        <div class="col-8 workaround__main workaround__main__first main-first mr-0 pr-0">
+        <div class="col-12 col-md-12 col-lg-9 workaround__main workaround__main__first  px-0">
             <div class="row workaround__main_top mr-0 pr-0">
-                <p class="col-9 workaround__main_paragraph">John's mktplace ></p>
-                <div class="col-3 text-right">
+                <p class="col-12 col-lg-8 workaround__main_paragraph">John's mktplace </p>
+                <div class="col-12 col-lg-4 text-right-mob text-right">
                     <form id="target" action="main.html">
                         <label for="file" class="workaround__main_input">+ Add file</label>
                         <input type="file" id="file" name="file" multiple>
@@ -85,31 +88,89 @@
             <div class="workaround__main_content">
 
             </div>
+            <div class="workaround__main_submit ">
+                    <table class="workaround__main_submit-table table table-responsive-sm col-12  px-0 ">
+                            <thead class="workaround__main_submit-head">
+                              <tr>
+                                <th scope="col">File Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity Sold</th>
+                                <th scope="col">Value Sold</th>
+                                <th scope="col">Status</th>
+                                <th scope="col"><i class="fas fa-chevron-down"></i></th>
+                              </tr>
+                            </thead>
+                            <tbody class="workaround__main_submit-body">
+                                <tr>
+                                    <td scope="row">Sales Template</td>
+                                    <td>£10</td>
+                                    <td>15</td>
+                                    <td>£150</td>
+                                    <td>Draft</td>
+                                    <td><i class="fas fa-chevron-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td ></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                 <tr>
+                                    <td ></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                 <tr>
+                                    <td ></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                 <tr>
+                                    <td ></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                          </table>
+            </div>
         </div>
+
+    </div>
         <div class="workaround__main workaround__main__second main-second container col-xs-12 col-md-11">
             <div class="row mx-5">
                 <p class=" main-second__header">Last 30 Days</p>
             </div>
             <div class="row mx-4">
-                <div class=" col-xs-12 col-md-3">
+                <div class=" col-12 col-md-6 col-lg-3">
                     <div class=" main-second__card mx-1 container">
                     <p class="main-second__title">30</p>
                     <p class="main-second__subtitle">No. Sales</p>
                     </div>
                 </div>
-                <div class=" col-xs-12 col-md-3">
+                <div class=" col-12 col-md-6 col-lg-3">
                     <div class=" main-second__card mx-1 ">
                     <p class="main-second__title ">£22 500</p>
                     <p class="main-second__subtitle">Revenue</p>
                     </div>
                 </div>
-                <div class=" col-xs-12 col-md-3">
+                <div class=" col-12 col-md-6 col-lg-3">
                     <div class="main-second__card mx-1">
                     <p class="main-second__title">10 000</p>
                     <p class="main-second__subtitle">Impressions</p>
                     </div>
                 </div>
-                <div class=" col-xs-12 col-md-3">
+                <div class=" col-12 col-md-6 col-lg-3">
                     <div class="main-second__card mx-1">
                     <p class="main-second__title">550</p>
                     <p class="main-second__subtitle">Customers</p>
@@ -273,6 +334,30 @@
             </div>
         </div>
     </main>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content col-12">
+                <div class="col-8 modal-form-wrapper">
+                    <h3 class="modal-title" id="exampleModalLabel">Great!</h3>
+                    <p class="modal-subtitle">Enter the details of your product and start selling! You can edit these details later.</p>
+                    <form>
+                        <input type="text" placeholder="Sales Template" class="form-control modal-input col-12">
+                        <input type="text" placeholder="Enter Price" class="form-control modal-input col-12">
+                        <select class="form-control modal-input" id="exampleFormControlSelect1">
+                                <option>Sales Template</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                        </select>
+                        <button type="button" class="btn btn-primary modal-button col-12" data-dismiss="modal" aria-label="Close">Save draft</button>
+                    </form>
+                    <p class="modal-details">By completing this form you agree to our <br> <a href="">Terms & Conditions</a></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 	 crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -286,9 +371,7 @@
                 $(this).siblings(".workaround__middle_directory-structure").addClass("selected");
                 $(".fa-chevron-up").removeClass("up");
                 $(".fa-chevron-down").removeClass("down");
-
                 $('.selected').toggle('slow');
-
                 $(this).children('.fa-chevron-up').addClass("up");
                 $(".up").toggle();
                 $(this).children('.fa-chevron-down').addClass("down");
@@ -299,8 +382,12 @@
             });
             $('#file').change(function() {
                 $('#target').submit();
+                $('#exampleModal').modal('show');
             });
-            
+            $('.modal-button').on('click', function () {
+                $('.workaround__main_content').css('display', 'none');
+                $('.workaround__main_submit').css('display','block');
+            });
             $('.workaround__icon-info').on('click', function (){
                 $('.main-first').css('display', 'none');
                 $('.main-third').css('display', 'none');
@@ -309,7 +396,7 @@
             $('.workaround__icon-home').on('click', function (){
                 $('.main-third').css('display', 'none');
                 $('.main-second').css('display', 'none');
-                $('.main-first').css('display', 'block');
+                $('.main-first').css('display', 'flex');
             });
             $('.workaround__icon-dialog').on('click', function (){
                 $('.main-second').css('display', 'none');

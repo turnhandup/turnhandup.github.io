@@ -227,6 +227,22 @@ body {
 
 .workaround {
   min-height: 88vh; }
+  .workaround__main_submit {
+    display: none;
+    font-size: 14px; }
+    .workaround__main_submit-head {
+      background-color: #E5E9F2;
+      color: #8190A5; }
+    .workaround__main_submit tbody tr:nth-of-type(odd) {
+      background-color: #EEF2F7;
+      color: #8190A5;
+      font-weight: 700; }
+    .workaround__main_submit tr {
+      min-height: 70px;
+      height: 70px; }
+      .workaround__main_submit tr td, .workaround__main_submit tr th {
+        vertical-align: middle;
+        display: table-cell; }
   .workaround__left, .workaround__middle {
     border-right: 1px solid #E5E9F2; }
     .workaround__left_directory-header, .workaround__middle_directory-header {
@@ -288,11 +304,31 @@ body {
   .container {
     max-width: 100%; }
   .workaround__icon {
-    text-align: center; } }
+    text-align: center; }
+  .text-right-mob {
+    text-align: left !important; }
+  .workaround__main_top {
+    border-bottom: none; }
+  .workaround__left {
+    height: fit-content; } }
 
 @media (min-width: 768px) {
   .workaround__left {
     display: block; } }
+
+@media (max-width: 1023px) {
+  .text-right-mob {
+    text-align: left !important; }
+  .workaround__middle {
+    display: flex;
+    flex-wrap: wrap;
+    order: 2; }
+  .workaround__middle_directory {
+    width: 100%; }
+  .workaround__main.workaround__main__first {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 50vh; } }
 
 .main-second {
   background-color: #F9FAFC;
@@ -429,6 +465,7 @@ body {
   .main-third__right-incoming-message {
     font-size: 14px; }
     .main-third__right-incoming-message-wrapper-start, .main-third__right-incoming-message-wrapper {
+      max-width: fit-content;
       height: fit-content;
       background-color: #E5E9F2;
       border-radius: 100px;
@@ -473,4 +510,41 @@ body {
 @media (max-width: 1024px) {
   .main-third__right-personal-message-wrapper {
     margin-top: 0px; } }
+
+.modal-content {
+  margin: 0 auto; }
+
+.modal-title {
+  color: #47525E;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700; }
+
+.modal-subtitle {
+  color: #8190A5;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center; }
+
+.modal-form-wrapper {
+  margin: 10% auto;
+  padding: 40px 0; }
+
+.modal-button {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  background-color: #47525E;
+  border: 1px solid #47525E; }
+
+.modal-input {
+  margin: 10px 0; }
+
+.modal-details {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8190A5;
+  text-align: center;
+  margin: 20px 0px 30px; }
 
